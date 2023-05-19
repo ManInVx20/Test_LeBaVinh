@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 
-public class ObjectPool<T> : MonoBehaviour, IObjectPool<T> where T : MonoBehaviour, IPoolable
+public class ObjectPool<T> : CustomMonoBehaviour, IObjectPool<T> where T : CustomMonoBehaviour, IPoolable
 {
     [SerializeField]
     private T _prefab;
@@ -79,5 +79,10 @@ public class ObjectPool<T> : MonoBehaviour, IObjectPool<T> where T : MonoBehavio
 
             _allInstances.RemoveAt(i);
         }
+    }
+
+    public bool Exist()
+    {
+        return this != null;
     }
 }

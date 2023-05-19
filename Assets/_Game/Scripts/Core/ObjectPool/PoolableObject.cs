@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PoolableObject : MonoBehaviour, IPoolable
+public class PoolableObject : CustomMonoBehaviour, IPoolable
 {
     public IObjectPool Origin { get; set; }
 

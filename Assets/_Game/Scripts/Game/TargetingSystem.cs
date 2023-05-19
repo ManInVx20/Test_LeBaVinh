@@ -1,32 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
-public class TargetingSystem : MonoBehaviour
+public class TargetingSystem : CustomMonoBehaviour
 {
     [SerializeField]
     private Character _character;
     [SerializeField]
     private float _range = 5.0f;
 
-    private Transform _transform;
-
-    private void Awake()
+    private void Update()
     {
-        _transform = GetComponent<Transform>();
+        ScanRangedTarget();
     }
 
-    private void Update()
+    private void ScanRangedTarget()
     {
         Character target = null;
 
-        Collider2D[] colliderArray = Physics2D.OverlapCircleAll(_transform.position, _range);
+        Collider2D[] colliderArray = Physics2D.OverlapCircleAll(_character.GetTransform().position, _range);
         if (colliderArray.Length > 0)
         {
             for (int i = 0; i < colliderArray.Length; i++)
             {
                 if (Cache.TryGetCachedComponent2D<Character>(colliderArray[i], out Character character) && IsValidTarget(character) &&
-                    (target == null || Vector3.Distance(_character.GetTransform().position, target.GetTransform().position) < 
+                    (target == null || Vector3.Distance(_character.GetTransform().position, target.GetTransform().position) <
                     Vector3.Distance(_character.GetTransform().position, character.GetTransform().position)))
                 {
                     target = character;

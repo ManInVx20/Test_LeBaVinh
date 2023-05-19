@@ -3,21 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : PoolableObject
 {
     [SerializeField]
     private float _flySpeed = 10.0f;
     [SerializeField]
     private float _despawnTime = 3.0f;
-     
-    private Transform _transform;
+
     private Rigidbody2D _rb;
     private float _despawnTimer;
     private Character _owner;
+    private float _damage;
 
     private void Awake()
     {
-        _transform = GetComponent<Transform>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -36,25 +35,34 @@ public class Bullet : MonoBehaviour
         {
             if (IsValidTarget(character))
             {
-                character.Hit(10.0f);
+                character.Hit(_damage);
 
                 Despawn();
             }
         }
     }
 
-    public void Initialize(Vector3 position, Vector3 eulerAngles, Character owner)
+    public void Initialize(Vector3 position, Vector3 eulerAngles, Character owner, float damage)
     {
-        _transform.position = position;
-        _transform.eulerAngles = eulerAngles + _transform.eulerAngles;
+        GetTransform().position = position;
+        GetTransform().eulerAngles = eulerAngles + GetTransform().eulerAngles;
         _owner = owner;
+        _damage = damage;
 
-        _rb.velocity = _transform.up * _flySpeed;
+        _rb.velocity = GetTransform().right * _flySpeed;
+        _despawnTimer = 0.0f;
     }
 
     private void Despawn()
     {
-        Destroy(gameObject);
+        if (Origin.Exist())
+        {
+            ReturnToPool();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private bool IsValidTarget(Character character)

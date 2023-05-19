@@ -13,6 +13,14 @@ public static class Utilities
         return new Vector3(randomX, 0.0f, randomZ).normalized;
     }
 
+    public static Vector3 GetRandomDirection2D()
+    {
+        float randomX = UnityEngine.Random.Range(-1.0f, 1.0f);
+        float randomY = UnityEngine.Random.Range(-1.0f, 1.0f);
+
+        return new Vector3(randomX, randomY, 0.0f).normalized;
+    }
+
     public static Camera GetCameraWithName(string name)
     {
         for (int i = 0; i < Camera.allCamerasCount; i++)
