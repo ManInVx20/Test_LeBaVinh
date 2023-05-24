@@ -1,0 +1,2269 @@
+fileFormatVersion: 2
+guid: 83efa42acbc11bb4bad59dbfca7d26dd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -682543152530396811
+    second: PackVillage01_R_0
+  - first:
+      213: 3051006506691426220
+    second: PackVillage01_R_1
+  - first:
+      213: 178631141971677564
+    second: PackVillage01_R_2
+  - first:
+      213: -6252203916968421576
+    second: PackVillage01_R_3
+  - first:
+      213: 3750505564487396746
+    second: PackVillage01_R_4
+  - first:
+      213: 1363658596032473868
+    second: PackVillage01_R_5
+  - first:
+      213: 1295307061652517214
+    second: PackVillage01_R_6
+  - first:
+      213: 4645767526509951224
+    second: PackVillage01_R_7
+  - first:
+      213: -631581202677243187
+    second: PackVillage01_R_8
+  - first:
+      213: 4325748703013884501
+    second: PackVillage01_R_9
+  - first:
+      213: -7082204860406497737
+    second: PackVillage01_R_10
+  - first:
+      213: 8216798228078483361
+    second: PackVillage01_R_11
+  - first:
+      213: -1230764788402010174
+    second: PackVillage01_R_12
+  - first:
+      213: -6076877390126040922
+    second: PackVillage01_R_13
+  - first:
+      213: 7405025704869830125
+    second: PackVillage01_R_14
+  - first:
+      213: -4946610178327755398
+    second: PackVillage01_R_15
+  - first:
+      213: 4717246512529544079
+    second: PackVillage01_R_16
+  - first:
+      213: -2999577901373753272
+    second: PackVillage01_R_17
+  - first:
+      213: 1237064025683835235
+    second: PackVillage01_R_18
+  - first:
+      213: 6632773135464705728
+    second: PackVillage01_R_19
+  - first:
+      213: -7199239018297324528
+    second: PackVillage01_R_20
+  - first:
+      213: 2738837573454070034
+    second: PackVillage01_R_21
+  - first:
+      213: 998289389979847146
+    second: PackVillage01_R_22
+  - first:
+      213: -3577543042794657063
+    second: PackVillage01_R_23
+  - first:
+      213: 5496631184175435488
+    second: PackVillage01_R_24
+  - first:
+      213: 508271149711817193
+    second: PackVillage01_R_25
+  - first:
+      213: 4567025485469729861
+    second: PackVillage01_R_26
+  - first:
+      213: 124786998996670025
+    second: PackVillage01_R_27
+  - first:
+      213: -2094822980007385723
+    second: PackVillage01_R_28
+  - first:
+      213: 6431200860388660006
+    second: PackVillage01_R_29
+  - first:
+      213: -3633969061762456913
+    second: PackVillage01_R_30
+  - first:
+      213: 4808470379582243479
+    second: PackVillage01_R_31
+  - first:
+      213: -1100241342591933597
+    second: PackVillage01_R_32
+  - first:
+      213: -8778254695990436033
+    second: PackVillage01_R_33
+  - first:
+      213: 1593251844205531765
+    second: PackVillage01_R_34
+  - first:
+      213: 1185942579513695115
+    second: PackVillage01_R_35
+  - first:
+      213: -4879437599921551610
+    second: PackVillage01_R_36
+  - first:
+      213: -6732430681684673274
+    second: PackVillage01_R_37
+  - first:
+      213: 6650550658593797005
+    second: PackVillage01_R_38
+  - first:
+      213: -651368548697233636
+    second: PackVillage01_R_39
+  - first:
+      213: -4377250887485824350
+    second: PackVillage01_R_40
+  - first:
+      213: -4477105937559756097
+    second: PackVillage01_R_41
+  - first:
+      213: -8878064803519354741
+    second: PackVillage01_R_42
+  - first:
+      213: -5541119688248503584
+    second: PackVillage01_R_43
+  - first:
+      213: -3830905198010214209
+    second: PackVillage01_R_44
+  - first:
+      213: 7227859040530582713
+    second: PackVillage01_R_45
+  - first:
+      213: 2000490918681036114
+    second: PackVillage01_R_46
+  - first:
+      213: 2113480291020066241
+    second: PackVillage01_R_47
+  - first:
+      213: -5317490617978704465
+    second: PackVillage01_R_48
+  - first:
+      213: 8362468201677551042
+    second: PackVillage01_R_49
+  - first:
+      213: 2595757486690275503
+    second: PackVillage01_R_50
+  - first:
+      213: 7372695152494327169
+    second: PackVillage01_R_51
+  - first:
+      213: -4353638292190536632
+    second: PackVillage01_R_52
+  - first:
+      213: -1486600512938929303
+    second: PackVillage01_R_53
+  - first:
+      213: -7304041847426744357
+    second: PackVillage01_R_54
+  - first:
+      213: -7829516969279675948
+    second: PackVillage01_R_55
+  - first:
+      213: 5738571557682975622
+    second: PackVillage01_R_56
+  - first:
+      213: 929752615233082033
+    second: PackVillage01_R_57
+  - first:
+      213: 685622293332412772
+    second: PackVillage01_R_58
+  - first:
+      213: 5341118957005286148
+    second: PackVillage01_R_59
+  - first:
+      213: -417478585535921124
+    second: PackVillage01_R_60
+  - first:
+      213: 3784496083163061110
+    second: PackVillage01_R_61
+  - first:
+      213: -8886335368325273101
+    second: PackVillage01_R_62
+  - first:
+      213: 6116841547885912499
+    second: PackVillage01_R_63
+  - first:
+      213: -2619609380112687477
+    second: PackVillage01_R_64
+  - first:
+      213: -7217158311512024079
+    second: PackVillage01_R_65
+  - first:
+      213: 6218989786233198877
+    second: PackVillage01_R_66
+  - first:
+      213: 1225843961056029549
+    second: PackVillage01_R_67
+  - first:
+      213: -8532546025811440946
+    second: PackVillage01_R_68
+  - first:
+      213: -7480875325440744476
+    second: PackVillage01_R_69
+  - first:
+      213: -8432962647935558077
+    second: PackVillage01_R_70
+  - first:
+      213: -657424975833369111
+    second: PackVillage01_R_71
+  - first:
+      213: -3143586128969710976
+    second: PackVillage01_R_72
+  - first:
+      213: 6216100414353594611
+    second: PackVillage01_R_73
+  - first:
+      213: 9074336835317884394
+    second: PackVillage01_R_74
+  - first:
+      213: 3975630935086055550
+    second: PackVillage01_R_75
+  - first:
+      213: 2599266358922237242
+    second: PackVillage01_R_76
+  - first:
+      213: 6655365444618603008
+    second: PackVillage01_R_77
+  - first:
+      213: -6761218820245657021
+    second: PackVillage01_R_78
+  - first:
+      213: -8389702450600235342
+    second: PackVillage01_R_79
+  - first:
+      213: -206038920466603012
+    second: PackVillage01_R_80
+  - first:
+      213: -3023986706706748644
+    second: PackVillage01_R_81
+  - first:
+      213: 4125152200877660750
+    second: PackVillage01_R_82
+  - first:
+      213: -8185427573233666181
+    second: PackVillage01_R_83
+  - first:
+      213: -5021292928039415169
+    second: PackVillage01_R_84
+  - first:
+      213: -1586958544566588274
+    second: PackVillage01_R_85
+  - first:
+      213: 3544731273322959315
+    second: PackVillage01_R_86
+  - first:
+      213: -1824388941027222976
+    second: PackVillage01_R_87
+  - first:
+      213: -7432814587882538062
+    second: PackVillage01_R_88
+  - first:
+      213: -6805957053288462603
+    second: PackVillage01_R_89
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PackVillage01_R_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 844
+        width: 143
+        height: 151
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579ec897e9e1786f0800000000000000
+      internalID: -682543152530396811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 844
+        width: 91
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca77fbeb04a575a20800000000000000
+      internalID: 3051006506691426220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 844
+        width: 117
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c715b03c310aa7200800000000000000
+      internalID: 178631141971677564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_3
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 844
+        width: 123
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8379ac1c9a5bb39a0800000000000000
+      internalID: -6252203916968421576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 844
+        width: 86
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8da56b90f87c0430800000000000000
+      internalID: 3750505564487396746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_5
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 844
+        width: 86
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b6c63a440bce210800000000000000
+      internalID: 1363658596032473868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_6
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 844
+        width: 91
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e517ad4e8ead9f110800000000000000
+      internalID: 1295307061652517214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_7
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 844
+        width: 91
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8bba673f4197040800000000000000
+      internalID: 4645767526509951224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 783
+        width: 73
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2eb9f0e3c2c37f0800000000000000
+      internalID: -631581202677243187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_9
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 769
+        width: 73
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552dfbec685280c30800000000000000
+      internalID: 4325748703013884501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_10
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 797
+        width: 41
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73efcecd334f6bd90800000000000000
+      internalID: -7082204860406497737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_11
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 793
+        width: 46
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a75da7347ee70270800000000000000
+      internalID: 8216798228078483361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_12
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 822
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c74d3122f17beee0800000000000000
+      internalID: -1230764788402010174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_13
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 735
+        width: 47
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a83fe9d5389aaba0800000000000000
+      internalID: -6076877390126040922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_14
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 711
+        width: 83
+        height: 94
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded176325afe3c660800000000000000
+      internalID: 7405025704869830125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_15
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 720
+        width: 83
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a754176404c1a5bb0800000000000000
+      internalID: -4946610178327755398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_16
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 767
+        width: 73
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f831649c5b6077140800000000000000
+      internalID: 4717246512529544079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_17
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 803
+        width: 10
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84871888acb5f56d0800000000000000
+      internalID: -2999577901373753272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_18
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 755
+        width: 40
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369bc475d2fea2110800000000000000
+      internalID: 1237064025683835235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_19
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 785
+        width: 11
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cea02756085c0c50800000000000000
+      internalID: 6632773135464705728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_20
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 743
+        width: 89
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c814d814a271c90800000000000000
+      internalID: -7199239018297324528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_21
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 727
+        width: 42
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2110937134e420620800000000000000
+      internalID: 2738837573454070034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_22
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 773
+        width: 10
+        height: 4
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae94ac839e2aadd00800000000000000
+      internalID: 998289389979847146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 704
+        width: 63
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9daed85ae830a5ec0800000000000000
+      internalID: -3577543042794657063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_24
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 740
+        width: 24
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee8c1a80f4f74c40800000000000000
+      internalID: 5496631184175435488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_25
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 759
+        width: 39
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9f620faedbd0700800000000000000
+      internalID: 508271149711817193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_26
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 715
+        width: 67
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544449d5b75516f30800000000000000
+      internalID: 4567025485469729861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_27
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 717
+        width: 20
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94698cb4d155bb100800000000000000
+      internalID: 124786998996670025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_28
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 709
+        width: 63
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585a5593991bde2e0800000000000000
+      internalID: -2094822980007385723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_29
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 732
+        width: 6
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62317aacb17304950800000000000000
+      internalID: 6431200860388660006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_30
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 693
+        width: 70
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2a3e4546c819dc0800000000000000
+      internalID: -3633969061762456913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_31
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 672
+        width: 65
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792ccf7755e1bb240800000000000000
+      internalID: 4808470379582243479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_32
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 714
+        width: 30
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363eb9704582bb0f0800000000000000
+      internalID: -1100241342591933597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_33
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 683
+        width: 43
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fd599fcdf5d2680800000000000000
+      internalID: -8778254695990436033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 700
+        width: 24
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5725b936c1e5c1610800000000000000
+      internalID: 1593251844205531765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_35
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 689
+        width: 22
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b9cef1e70557010800000000000000
+      internalID: 1185942579513695115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_36
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 668
+        width: 63
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607cdf0fa51c84cb0800000000000000
+      internalID: -4879437599921551610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_37
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 676
+        width: 71
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d7e3707f99192a0800000000000000
+      internalID: -6732430681684673274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_38
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 641
+        width: 45
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83393e76908b4c50800000000000000
+      internalID: 6650550658593797005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_39
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 650
+        width: 75
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c172a0d81cfd5f6f0800000000000000
+      internalID: -651368548697233636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_40
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 675
+        width: 63
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2e4ae6281e043c0800000000000000
+      internalID: -4377250887485824350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_41
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 643
+        width: 29
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb265f9dedf1ed1c0800000000000000
+      internalID: -4477105937559756097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_42
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 618
+        width: 73
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88a4556917cac480800000000000000
+      internalID: -8878064803519354741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_43
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 650
+        width: 6
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2560c600df913b0800000000000000
+      internalID: -5541119688248503584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_44
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 650
+        width: 6
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb85768f404e5dac0800000000000000
+      internalID: -3830905198010214209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_45
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 615
+        width: 19
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bccb65a0838e4460800000000000000
+      internalID: 7227859040530582713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_46
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 568
+        width: 74
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255c06834eb23cb10800000000000000
+      internalID: 2000490918681036114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_47
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 559
+        width: 58
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd4a028027945d10800000000000000
+      internalID: 2113480291020066241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_48
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 627
+        width: 86
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad28eac47a7436b0800000000000000
+      internalID: -5317490617978704465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_49
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 580
+        width: 10
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c57d7ee5847d0470800000000000000
+      internalID: 8362468201677551042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_50
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 580
+        width: 10
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa01c356eabf50420800000000000000
+      internalID: 2595757486690275503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_51
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 413
+        width: 41
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1853ba1dd23115660800000000000000
+      internalID: 7372695152494327169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_52
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 408
+        width: 91
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cd1713a05c493c0800000000000000
+      internalID: -4353638292190536632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_53
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 408
+        width: 91
+        height: 124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9639c57b5b88e5be0800000000000000
+      internalID: -1486600512938929303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_54
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 408
+        width: 90
+        height: 110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf7a8363a4d2aa90800000000000000
+      internalID: -7304041847426744357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_55
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 408
+        width: 90
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1213b8cc7f75390800000000000000
+      internalID: -7829516969279675948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_56
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 408
+        width: 121
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6839add6d6083af40800000000000000
+      internalID: 5738571557682975622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_57
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 408
+        width: 119
+        height: 150
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b255f7d31527ec00800000000000000
+      internalID: 929752615233082033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_58
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 408
+        width: 91
+        height: 127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469ca2cd7d1d38900800000000000000
+      internalID: 685622293332412772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_59
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 408
+        width: 131
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ba76794677f1a40800000000000000
+      internalID: 5341118957005286148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_60
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 354
+        width: 36
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c148cc73071d43af0800000000000000
+      internalID: -417478585535921124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_61
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 298
+        width: 73
+        height: 87
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b9ac2f22b358430800000000000000
+      internalID: 3784496083163061110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_62
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 358
+        width: 15
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f96bf770156da480800000000000000
+      internalID: -8886335368325273101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_63
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 357
+        width: 61
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b12719baf263e450800000000000000
+      internalID: 6116841547885912499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_64
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 344
+        width: 119
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e1a18e52745abd0800000000000000
+      internalID: -2619609380112687477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_65
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 363
+        width: 11
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb519af0c087db90800000000000000
+      internalID: -7217158311512024079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_66
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 323
+        width: 83
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19563ec24a4e4650800000000000000
+      internalID: 6218989786233198877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_67
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 342
+        width: 89
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b6dc87692130110800000000000000
+      internalID: 1225843961056029549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_68
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 318
+        width: 44
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca86ddc89e469980800000000000000
+      internalID: -8532546025811440946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_69
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 297
+        width: 73
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3ae12e6879e2890800000000000000
+      internalID: -7480875325440744476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_70
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 306
+        width: 41
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ed9a5c62918fa80800000000000000
+      internalID: -8432962647935558077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_71
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 270
+        width: 66
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e57bf8b77b50e6f0800000000000000
+      internalID: -657424975833369111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_72
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 338
+        width: 12
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0824ae5321dbf54d0800000000000000
+      internalID: -3143586128969710976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_73
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 272
+        width: 67
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f854bd7466044650800000000000000
+      internalID: 6216100414353594611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_74
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 282
+        width: 73
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae56d5916458eed70800000000000000
+      internalID: 9074336835317884394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_75
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 314
+        width: 67
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70cbdb85474c2730800000000000000
+      internalID: 3975630935086055550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_76
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 295
+        width: 18
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35de206bf2721420800000000000000
+      internalID: 2599266358922237242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_77
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 286
+        width: 14
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ac6e83c9b9c5c50800000000000000
+      internalID: 6655365444618603008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_78
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 284
+        width: 35
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a62923e435b22a0800000000000000
+      internalID: -6761218820245657021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_79
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 284
+        width: 35
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2beafbc521ac19b80800000000000000
+      internalID: -8389702450600235342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_80
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 236
+        width: 40
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3eea781b0042df0800000000000000
+      internalID: -206038920466603012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_81
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 217
+        width: 70
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1bad3dac14a806d0800000000000000
+      internalID: -3023986706706748644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_82
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 227
+        width: 69
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4adbb9121c7f3930800000000000000
+      internalID: 4125152200877660750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_83
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 226
+        width: 63
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7738ba8df4876e80800000000000000
+      internalID: -8185427573233666181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_84
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 229
+        width: 78
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7297079fa8c05ab0800000000000000
+      internalID: -5021292928039415169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_85
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 244
+        width: 66
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c66dd9c9df9f9e0800000000000000
+      internalID: -1586958544566588274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_86
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 235
+        width: 74
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d112a2ff4a613130800000000000000
+      internalID: 3544731273322959315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_87
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 192
+        width: 46
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04adbe59ce77ea6e0800000000000000
+      internalID: -1824388941027222976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_88
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 163
+        width: 77
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb7be7538659d890800000000000000
+      internalID: -7432814587882538062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PackVillage01_R_89
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 822
+        width: 21
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f64d2a9e126c81a0800000000000000
+      internalID: -6805957053288462603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

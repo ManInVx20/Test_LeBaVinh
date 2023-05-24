@@ -7,6 +7,12 @@ public class Enemy : Character
     public EnemyIdleState IdleState { get; } = new EnemyIdleState();
     public EnemyPatrolState PatrolState { get; } = new EnemyPatrolState();
 
+    [Header("Prize")]
+    [SerializeField]
+    private float _energyPrize = 10.0f;
+    [SerializeField]
+    private int _goldPrize = 1;
+
     private IEnemyState _state;
     private float _attackTimer;
     private float _attackTime;
@@ -28,6 +34,15 @@ public class Enemy : Character
         _state?.Execute(this);
 
         HandleAttack();
+    }
+
+    public override void Die()
+    {
+        base.Die();
+
+        Player.Instance.ChangeEnergy(_energyPrize);
+
+        ResourceManager.Instance.TryChangeGold(_goldPrize);
     }
 
     public void ChangeState(IEnemyState newState)

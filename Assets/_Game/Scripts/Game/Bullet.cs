@@ -31,14 +31,24 @@ public class Bullet : PoolableObject
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.GetType().Equals(typeof(BoxCollider2D)) && Cache.TryGetCachedComponent2D<Character>(collider, out Character character))
+        if (!gameObject.activeInHierarchy)
         {
-            if (IsValidTarget(character))
+            return;
+        }
+
+        if (collider.GetType().Equals(typeof(BoxCollider2D)))
+        {
+            if (Cache.TryGetCachedComponent<Character>(collider, out Character character) && IsValidTarget(character))
             {
                 character.Hit(_damage);
 
                 Despawn();
             }
+        }
+
+        if (Cache.TryGetCachedComponent<Obstacle>(collider, out _))
+        {
+            Despawn();
         }
     }
 

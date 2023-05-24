@@ -27,7 +27,7 @@ public static class Cache
         return false;
     }
 
-    public static bool TryGetCachedComponent2D<T>(Collider2D collider, out T component) where T : Component
+    public static bool TryGetCachedComponent<T>(Collider2D collider, out T component) where T : Component
     {
         if (_component2DDict.TryGetValue(collider, out Component value) && value is T)
         {

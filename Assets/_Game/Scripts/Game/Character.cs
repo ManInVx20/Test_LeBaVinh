@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : CustomMonoBehaviour
+public class Character : PoolableObject
 {
     public class OnCharacterHealthChangedArgs : EventArgs
     {
@@ -38,6 +38,8 @@ public class Character : CustomMonoBehaviour
     [SerializeField]
     private bool _isFacingRight = true;
     [SerializeField]
+    private bool _isMainWeapon = true;
+    [SerializeField]
     private float _moveSpeed = 5.0f;
     [SerializeField]
     private float _maxHealth = 100.0f;
@@ -60,7 +62,6 @@ public class Character : CustomMonoBehaviour
     private float _energy;
     private float _shield;
     private float _restoreShieldTimer;
-    private bool _isMainWeapon;
     private bool _isManualAttacking;
     private bool _isAutoAttacking;
 
@@ -102,10 +103,9 @@ public class Character : CustomMonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
 
-        SwapMainWeapon(_mainWeaponHolder.GetComponentInChildren<Weapon>());
+        ChangeMainWeapon(_mainWeaponHolder.GetComponentInChildren<Weapon>());
 
-        _subWeapon = _subWeaponHolder.GetComponentInChildren<Weapon>();
-        _subWeapon.Initialize(_subWeaponHolder, this);
+        ChangeSubWeapon(_subWeaponHolder.GetComponentInChildren<Weapon>());
     }
 
     public virtual void Begin()
@@ -124,17 +124,15 @@ public class Character : CustomMonoBehaviour
             GetTransform().localRotation = Quaternion.Euler(0.0f, 180.0f, 0.0f);
         }
 
-        _isMainWeapon = true;
-
         if (_isMainWeapon)
         {
-            _mainWeapon.Show();
-            _subWeapon.Hide();
+            _mainWeapon?.Show();
+            _subWeapon?.Hide();
         }
         else
         {
-            _mainWeapon.Hide();
-            _subWeapon.Show();
+            _mainWeapon?.Hide();
+            _subWeapon?.Show();
         }
 
         OnCharacterHealthChanged?.Invoke(this, new OnCharacterHealthChangedArgs
@@ -182,6 +180,20 @@ public class Character : CustomMonoBehaviour
     public virtual void ExitCollision(Collider2D collider)
     {
 
+    }
+
+    public virtual void Die()
+    {
+        _rb.simulated = false;
+
+        _characterAnimator.ChangeAnim(CharacterAnimator.Anim.Die);
+
+        Invoke(nameof(Despawn), 2.0f);
+    }
+
+    public virtual void Despawn()
+    {
+        Destroy(gameObject);
     }
 
     public CharacterAnimator GetCharacterAnimator()
@@ -269,7 +281,7 @@ public class Character : CustomMonoBehaviour
         GetTransform().Rotate(0.0f, 180.0f, 0.0f);
     }
 
-    public void SwapMainWeapon(Weapon weapon)
+    public void ChangeMainWeapon(Weapon weapon)
     {
         if (_mainWeapon != null)
         {
@@ -288,19 +300,38 @@ public class Character : CustomMonoBehaviour
         }
     }
 
+    public void ChangeSubWeapon(Weapon weapon)
+    {
+        if (_subWeapon != null)
+        {
+            _subWeapon.Drop(weapon.GetTransform().position);
+        }
+
+        if (weapon != null)
+        {
+            _subWeapon = weapon;
+            _subWeapon.Initialize(_subWeaponHolder, this);
+
+            if (!_isMainWeapon)
+            {
+                _subWeapon.Hide();
+            }
+        }
+    }
+
     public void SwapWeapon()
     {
         _isMainWeapon = !_isMainWeapon;
 
         if (_isMainWeapon)
         {
-            _mainWeapon.Show();
-            _subWeapon.Hide();
+            _mainWeapon?.Show();
+            _subWeapon?.Hide();
         }
         else
         {
-            _mainWeapon.Hide();
-            _subWeapon.Show();
+            _mainWeapon?.Hide();
+            _subWeapon?.Show();
         }
     }
 
@@ -378,20 +409,6 @@ public class Character : CustomMonoBehaviour
         }
     }
 
-    public void Die()
-    {
-        _rb.simulated = false;
-
-        _characterAnimator.ChangeAnim(CharacterAnimator.Anim.Die);
-
-        Invoke(nameof(Despawn), 2.0f);
-    }
-
-    public void Despawn()
-    {
-        Destroy(gameObject);
-    }
-
     private void HandleLook()
     {
         if (_target == null)
@@ -432,9 +449,15 @@ public class Character : CustomMonoBehaviour
             _aimDirection = GetTransform().localRotation * (_target.GetTransform().position - GetTransform().position).normalized;
         }
 
-        _mainWeapon.GetTransform().localEulerAngles = new Vector3(0.0f, 0.0f, Utilities.GetAngleFromDirection(_aimDirection));
+        if (_mainWeapon != null)
+        {
+            _mainWeapon.GetTransform().localEulerAngles = new Vector3(0.0f, 0.0f, Utilities.GetAngleFromDirection(_aimDirection));
+        }
 
-        _subWeapon.GetTransform().localEulerAngles = new Vector3(0.0f, 0.0f, Utilities.GetAngleFromDirection(_aimDirection));
+        if (_subWeapon != null)
+        {
+            _subWeapon.GetTransform().localEulerAngles = new Vector3(0.0f, 0.0f, Utilities.GetAngleFromDirection(_aimDirection));
+        }
     }
 
     private void HandleAnim()

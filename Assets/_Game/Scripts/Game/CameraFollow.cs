@@ -15,6 +15,8 @@ public class CameraFollow : CustomMonoBehaviour
     private void Start()
     {
         _targetTransform = Player.Instance.GetTransform();
+
+        GetTransform().position = _targetTransform.position + _offset;
     }
 
     private void LateUpdate()

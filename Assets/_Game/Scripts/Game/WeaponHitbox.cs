@@ -9,7 +9,7 @@ public class WeaponHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.GetType().Equals(typeof(BoxCollider2D)) && Cache.TryGetCachedComponent2D<Character>(collider, out Character character))
+        if (collider.GetType().Equals(typeof(BoxCollider2D)) && Cache.TryGetCachedComponent<Character>(collider, out Character character))
         {
             if (IsValidTarget(character))
             {

@@ -6,9 +6,10 @@ public class RangedWeapon : Weapon
 {
     public enum Type
     {
-        MachineGun = 0,
-        Shotgun = 1,
-        Sniper = 2,
+        Pistol = 0,
+        MachineGun = 1,
+        Shotgun = 2,
+        Sniper = 3,
     }
 
     [SerializeField]
@@ -25,6 +26,7 @@ public class RangedWeapon : Weapon
         Bullet bullet = null;
         switch (_type)
         {
+            case Type.Pistol:
             case Type.MachineGun:
             case Type.Sniper:
                 float randomAngle = Random.Range(-1.5f, 1.5f);
@@ -36,7 +38,8 @@ public class RangedWeapon : Weapon
             case Type.Shotgun:
                 int bulletCount = 3;
                 Vector3[] targetShootPointEulerAnglesArray = new Vector3[bulletCount];
-                float angle = 15.0f, angleStep = 15.0f;
+                float angle = 10.0f, angleStep = 10.0f;
+
                 for (int i = 0; i < bulletCount; i++)
                 {
                     targetShootPointEulerAnglesArray[i] = _shootPoint.eulerAngles + new Vector3(0.0f, 0.0f, angle - angleStep * i);
@@ -54,7 +57,7 @@ public class RangedWeapon : Weapon
 
         if (Player.Instance.IsMainWeapon())
         {
-            Player.Instance.SwapMainWeapon(this);
+            Player.Instance.ChangeMainWeapon(this);
         }
     }
 }
