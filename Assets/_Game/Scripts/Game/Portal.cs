@@ -6,7 +6,7 @@ public class Portal : CustomMonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (Cache.TryGetCachedComponent<Player>(collider, out _))
+        if (collider is BoxCollider2D && Cache.TryGetCachedComponent<Player>(collider, out _))
         {
             Finish();
         }
@@ -14,7 +14,9 @@ public class Portal : CustomMonoBehaviour
 
     private void Finish()
     {
-        Debug.Log("Finish");
-
+        if (!LevelManager.Instance.TryLoadNextLevel())
+        {
+            GameManager.Instance.ExitGame();
+        }
     }
 }

@@ -11,6 +11,7 @@ public class Level : CustomMonoBehaviour
     private void Start()
     {
         Player.Instance.GetTransform().position = _startPoint.position;
+        Player.Instance.SetMoveDirection(Vector3.zero);
     }
 
     public void Despawn()

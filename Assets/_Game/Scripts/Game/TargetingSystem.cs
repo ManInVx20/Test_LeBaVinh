@@ -25,7 +25,7 @@ public class TargetingSystem : CustomMonoBehaviour
             for (int i = 0; i < colliderArray.Length; i++)
             {
                 if (Cache.TryGetCachedComponent<Character>(colliderArray[i], out Character character) && IsValidTarget(character) &&
-                    (target == null || Vector3.Distance(_character.GetTransform().position, target.GetTransform().position) <
+                    (target == null || Vector3.Distance(_character.GetTransform().position, target.GetTransform().position) >
                     Vector3.Distance(_character.GetTransform().position, character.GetTransform().position)))
                 {
                     target = character;

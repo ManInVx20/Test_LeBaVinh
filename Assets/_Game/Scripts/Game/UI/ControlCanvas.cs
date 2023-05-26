@@ -8,7 +8,7 @@ public class ControlCanvas : UICanvas
     [SerializeField]
     private HoldButton _attackHoldButton;
     [SerializeField]
-    private Button _autoAttackButton;
+    private Toggle _autoAttackToggle;
     [SerializeField]
     private Button _swapWeaponButton;
     [SerializeField]
@@ -24,7 +24,7 @@ public class ControlCanvas : UICanvas
         {
             Player.Instance?.DisableManualAttack();
         });
-        _autoAttackButton.onClick.AddListener(() =>
+        _autoAttackToggle.onValueChanged.AddListener((value) =>
         {
             Player.Instance?.ToggleAutoAttack();
         });

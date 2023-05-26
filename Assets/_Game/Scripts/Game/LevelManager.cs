@@ -9,19 +9,21 @@ public class LevelManager : Singleton<LevelManager>
 
     private void Awake()
     {
-        levelIndex = GameDataManager.Instance.GetGameData().LevelIndex;
+        levelIndex = 0;
     }
 
-    public void NextLevel()
+    public bool TryLoadNextLevel()
     {
-        if (levelIndex < ResourceManager.Instance.LevelPrefabArray.Length)
+        if (levelIndex + 1 < ResourceManager.Instance.LevelPrefabArray.Length)
         {
             levelIndex += 1;
 
-            GameDataManager.Instance.GetGameData().LevelIndex = levelIndex;
+            LoadLevel();
 
-            GameDataManager.Instance.WriteFile();
+            return true;
         }
+
+        return false;
     }
 
     public int GetCurrentLevel()
@@ -31,10 +33,7 @@ public class LevelManager : Singleton<LevelManager>
 
     public void LoadLevel()
     {
-        if (level != null)
-        {
-            level.Despawn();
-        }
+        UnloadLevel();
 
         level = Instantiate(ResourceManager.Instance.LevelPrefabArray[levelIndex]);
     }
