@@ -7,6 +7,10 @@ public class Enemy : Character
     public EnemyIdleState IdleState { get; } = new EnemyIdleState();
     public EnemyPatrolState PatrolState { get; } = new EnemyPatrolState();
 
+    [FloatRangeSlider(0.1f, 100.0f)]
+    [SerializeField]
+    private FloatRange _attackTimeRange = new FloatRange();
+
     [Header("Prize")]
     [SerializeField]
     private float _energyPrize = 10.0f;
@@ -24,7 +28,7 @@ public class Enemy : Character
         ChangeState(IdleState);
 
         _attackTimer = 0.0f;
-        _attackTime = Random.Range(2.0f, 5.0f);
+        _attackTime = _attackTimeRange.RandomValueInRange;
 
         Hide();
     }
@@ -72,7 +76,7 @@ public class Enemy : Character
         if (_attackTimer >= _attackTime)
         {
             _attackTimer = 0.0f;
-            _attackTime = Random.Range(2.0f, 5.0f);
+            _attackTime = _attackTimeRange.RandomValueInRange;
 
             if (IsManualAttacking())
             {

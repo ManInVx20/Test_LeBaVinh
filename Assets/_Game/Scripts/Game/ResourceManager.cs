@@ -9,6 +9,10 @@ public class ResourceManager : Singleton<ResourceManager>
     public GameObject HorizontalWallPrefab { get; private set; }
     [field: SerializeField]
     public GameObject VerticalWallPrefab { get; private set; }
+    [field: SerializeField]
+    public Player PlayerPrefab { get; private set; }
+    [field: SerializeField]
+    public Level[] LevelPrefabArray { get; private set; }
 
     public event EventHandler OnGemChanged;
     public event EventHandler OnGoldChanged;

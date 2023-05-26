@@ -85,6 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flySpeed: 5
   _despawnTime: 3
+  _hitVFXPrefab: {fileID: 6407102160560226964, guid: 4b7024f64bf8e2044aab355738b748c3, type: 3}
 --- !u!1 &8654266542606574567
 GameObject:
   m_ObjectHideFlags: 0

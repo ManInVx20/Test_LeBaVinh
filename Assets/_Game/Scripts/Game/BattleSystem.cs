@@ -99,7 +99,6 @@ public class BattleSystem : CustomMonoBehaviour
 
     private void StartBattle()
     {
-        Debug.Log("Active");
         _state = State.Active;
 
         OnBattleStart?.Invoke(this, EventArgs.Empty);
@@ -111,7 +110,6 @@ public class BattleSystem : CustomMonoBehaviour
         {
             if (AreWavesOver())
             {
-                Debug.Log("Over");
                 _state = State.Over;
 
                 OnBattleOver?.Invoke(this, EventArgs.Empty);

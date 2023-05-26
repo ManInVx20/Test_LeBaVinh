@@ -18,12 +18,19 @@ public class PlayerStatusUI : CustomMonoBehaviour
     private Slider _shieldSlider;
     [SerializeField]
     private TextMeshProUGUI _shieldText;
-
-    private void Start()
+    
+    private void OnEnable()
     {
         Player.Instance.OnCharacterHealthChanged += Player_OnCharacterHealthChanged;
         Player.Instance.OnCharacterEnergyChanged += Player_OnCharacterEnergyChanged;
         Player.Instance.OnCharacterShieldChanged += Player_OnCharacterShieldChanged;
+    }
+
+    private void OnDisable()
+    {
+        Player.Instance.OnCharacterHealthChanged -= Player_OnCharacterHealthChanged;
+        Player.Instance.OnCharacterEnergyChanged -= Player_OnCharacterEnergyChanged;
+        Player.Instance.OnCharacterShieldChanged -= Player_OnCharacterShieldChanged;
     }
 
     private void Player_OnCharacterHealthChanged(object sender, Character.OnCharacterHealthChangedArgs args)

@@ -25,12 +25,16 @@ public class Player : Character
 
         Vector3 moveDirection = Vector3.zero;
 
-        // PC (Test)
-        moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0.0f).normalized;
+        //// PC (Test)
+        //moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0.0f).normalized;
 
-        //// Mobile
-        //Vector2 moveInput = _joystick.GetInput().normalized;
-        //moveDirection = new Vector3(moveInput.x, moveInput.y, 0.0f).normalized;
+        // Mobile
+        if (_joystick == null)
+        {
+            _joystick = FindObjectOfType<Joystick>();
+        }
+        Vector2 moveInput = _joystick.GetInput().normalized;
+        moveDirection = new Vector3(moveInput.x, moveInput.y, 0.0f).normalized;
 
         SetMoveDirection(moveDirection);
     }
@@ -61,11 +65,13 @@ public class Player : Character
         }
     }
 
-    public void CollectItem()
+    public void Interact()
     {
         if (_collectableItemList.Count > 0)
         {
             _collectableItemList[0].Collect();
+
+            _collectableItemList.RemoveAt(0);
         }
     }
 }

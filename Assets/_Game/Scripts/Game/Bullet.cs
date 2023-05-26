@@ -9,6 +9,8 @@ public class Bullet : PoolableObject
     private float _flySpeed = 10.0f;
     [SerializeField]
     private float _despawnTime = 3.0f;
+    [SerializeField]
+    private ParticleSystem _hitVFXPrefab;
 
     private Rigidbody2D _rb;
     private float _despawnTimer;
@@ -65,6 +67,10 @@ public class Bullet : PoolableObject
 
     private void Despawn()
     {
+        Transform hitVFXTransform = Instantiate(_hitVFXPrefab).GetComponent<Transform>();
+        hitVFXTransform.position = GetTransform().position;
+        hitVFXTransform.localScale = GetTransform().localScale;
+
         if (Origin.Exist())
         {
             ReturnToPool();

@@ -32,7 +32,7 @@ public class Room : CustomMonoBehaviour
     [SerializeField]
     private Room _rightConnectedRoom;
 
-    [Header("Props")]
+    [Header("Components")]
     [SerializeField]
     private BattleSystem _battleSystem;
 

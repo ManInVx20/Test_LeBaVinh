@@ -12,18 +12,23 @@ public class CameraFollow : CustomMonoBehaviour
     private Transform _targetTransform;
     private Vector3 _currentVelocity;
 
-    private void Start()
-    {
-        _targetTransform = Player.Instance.GetTransform();
-
-        GetTransform().position = _targetTransform.position + _offset;
-    }
-
     private void LateUpdate()
     {
         if (_targetTransform != null)
         {
             GetTransform().position = Vector3.SmoothDamp(GetTransform().position, _targetTransform.position + _offset, ref _currentVelocity, _smoothTime);
+        }
+    }
+
+    public void SetTarget(Transform targetTransform)
+    {
+        _targetTransform = targetTransform;
+
+        if (_targetTransform != null)
+        {
+            _currentVelocity = Vector3.zero;
+
+            GetTransform().position = _targetTransform.position + _offset;
         }
     }
 }

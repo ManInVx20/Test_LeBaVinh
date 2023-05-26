@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponHitbox : MonoBehaviour
+public class WeaponHitbox : CustomMonoBehaviour
 {
     [SerializeField]
     private Weapon _weapon;
+    [SerializeField]
+    private ParticleSystem _hitVFXPrefab;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -13,6 +15,10 @@ public class WeaponHitbox : MonoBehaviour
         {
             if (IsValidTarget(character))
             {
+                Transform hitVFXTransform = Instantiate(_hitVFXPrefab).GetComponent<Transform>();
+                hitVFXTransform.position = GetTransform().position;
+                hitVFXTransform.localScale = GetTransform().localScale;
+
                 character.Hit(_weapon.GetAttackDamage());
             }
         }

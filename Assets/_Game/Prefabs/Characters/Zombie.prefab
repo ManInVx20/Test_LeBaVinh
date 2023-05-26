@@ -134,7 +134,10 @@ MonoBehaviour:
   _maxShield: 0
   _restoreShieldTime: 2
   _restoreShieldValue: 5
-  _energyPrize: 10
+  _attackTimeRange:
+    _min: 2
+    _max: 4
+  _energyPrize: 20
   _goldPrize: 1
 --- !u!1 &3480489277134713293
 GameObject:

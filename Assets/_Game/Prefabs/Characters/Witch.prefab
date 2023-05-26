@@ -210,7 +210,10 @@ MonoBehaviour:
   _maxShield: 0
   _restoreShieldTime: 2
   _restoreShieldValue: 5
-  _energyPrize: 10
+  _attackTimeRange:
+    _min: 1
+    _max: 3
+  _energyPrize: 20
   _goldPrize: 1
 --- !u!1001 &4576429724063921853
 PrefabInstance:

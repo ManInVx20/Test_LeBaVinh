@@ -15,5 +15,6 @@ public class Portal : CustomMonoBehaviour
     private void Finish()
     {
         Debug.Log("Finish");
+
     }
 }
