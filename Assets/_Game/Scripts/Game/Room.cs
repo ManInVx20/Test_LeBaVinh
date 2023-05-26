@@ -38,7 +38,20 @@ public class Room : CustomMonoBehaviour
 
     private void Start()
     {
+        _battleSystem.OnBattleStart += BattleSystem_OnBattleStart;
+        _battleSystem.OnBattleOver += BattleSystem_OnBattleOver;
+
         BuildBlocks();
+    }
+
+    private void BattleSystem_OnBattleStart(object sender, EventArgs args)
+    {
+        SpawnDoorBlocks();
+    }
+
+    private void BattleSystem_OnBattleOver(object sender, EventArgs args)
+    {
+        DespawnDoorBlocks();
     }
 
     private void BuildBlocks()
@@ -63,6 +76,44 @@ public class Room : CustomMonoBehaviour
             for (int i = 0; i < roomData.CorridorBlockTransformArray.Length; i++)
             {
                 Instantiate(corridorPrefab, roomData.CorridorBlockTransformArray[i]);
+            }
+        }
+    }
+
+    private void SpawnDoorBlocks()
+    {
+        GenerateDoorBlocks(_upConnectedRoom, ResourceManager.Instance.HorizontalWallPrefab, _upRoomData);
+        GenerateDoorBlocks(_downConnectedRoom, ResourceManager.Instance.HorizontalWallPrefab, _downRoomData);
+        GenerateDoorBlocks(_leftConnectedRoom, ResourceManager.Instance.VerticalWallPrefab, _leftRoomData);
+        GenerateDoorBlocks(_rightConnectedRoom, ResourceManager.Instance.VerticalWallPrefab, _rightRoomData);
+    }
+
+    private void DespawnDoorBlocks()
+    {
+        DestroyDoorBlocks(_upConnectedRoom, ResourceManager.Instance.HorizontalWallPrefab, _upRoomData);
+        DestroyDoorBlocks(_downConnectedRoom, ResourceManager.Instance.HorizontalWallPrefab, _downRoomData);
+        DestroyDoorBlocks(_leftConnectedRoom, ResourceManager.Instance.VerticalWallPrefab, _leftRoomData);
+        DestroyDoorBlocks(_rightConnectedRoom, ResourceManager.Instance.VerticalWallPrefab, _rightRoomData);
+    }
+
+    private void GenerateDoorBlocks(Room connectedRoom, GameObject doorPrefab,  RoomData roomData)
+    {
+        if (connectedRoom != null)
+        {
+            for (int i = 0; i < roomData.DoorBlockTransformArray.Length; i++)
+            {
+                Instantiate(doorPrefab, roomData.DoorBlockTransformArray[i]);
+            }
+        }
+    }
+
+    private void DestroyDoorBlocks(Room connectedRoom, GameObject doorPrefab, RoomData roomData)
+    {
+        if (connectedRoom != null)
+        {
+            for (int i = 0; i < roomData.DoorBlockTransformArray.Length; i++)
+            {
+                roomData.DoorBlockTransformArray[i].ClearChildren();
             }
         }
     }

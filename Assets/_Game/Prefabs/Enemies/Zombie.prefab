@@ -129,7 +129,7 @@ MonoBehaviour:
   _isFacingRight: 1
   _isMainWeapon: 0
   _moveSpeed: 4
-  _maxHealth: 120
+  _maxHealth: 100
   _maxEnergy: 0
   _maxShield: 0
   _restoreShieldTime: 2

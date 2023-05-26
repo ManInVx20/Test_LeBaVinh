@@ -25,20 +25,27 @@ public class Enemy : Character
 
         _attackTimer = 0.0f;
         _attackTime = Random.Range(2.0f, 5.0f);
+
+        Hide();
     }
 
     public override void Execute()
     {
         base.Execute();
 
-        _state?.Execute(this);
+        if (_state != null)
+        {
+            _state.Execute(this);
 
-        HandleAttack();
+            HandleAttack();
+        }
     }
 
     public override void Die()
     {
         base.Die();
+
+        ChangeState(null);
 
         Player.Instance.ChangeEnergy(_energyPrize);
 
@@ -52,6 +59,11 @@ public class Enemy : Character
         _state = newState;
 
         _state?.Enter(this);
+    }
+
+    public void Spawn()
+    {
+        Show();
     }
 
     private void HandleAttack()
