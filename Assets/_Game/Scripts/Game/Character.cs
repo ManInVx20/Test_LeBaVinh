@@ -24,6 +24,8 @@ public class Character : PoolableObject
     }
     public event EventHandler<OnCharacterShieldChangedArgs> OnCharacterShieldChanged;
 
+    public event EventHandler OnCharacterDespawned;
+
     private const float MIN_MOVE_SQR_MAGNITUDE = 0.01f;
 
     [Header("Components")]
@@ -193,6 +195,8 @@ public class Character : PoolableObject
 
     public virtual void Despawn()
     {
+        OnCharacterDespawned?.Invoke(this, EventArgs.Empty);
+
         Destroy(gameObject);
     }
 
@@ -285,7 +289,7 @@ public class Character : PoolableObject
     {
         if (_mainWeapon != null)
         {
-            _mainWeapon.Drop(weapon.GetTransform().position);
+            _mainWeapon.Drop(weapon.GetTransform().parent, weapon.GetTransform().position);
         }
 
         if (weapon != null)
@@ -304,7 +308,7 @@ public class Character : PoolableObject
     {
         if (_subWeapon != null)
         {
-            _subWeapon.Drop(weapon.GetTransform().position);
+            _subWeapon.Drop(weapon.GetTransform().parent, weapon.GetTransform().position);
         }
 
         if (weapon != null)

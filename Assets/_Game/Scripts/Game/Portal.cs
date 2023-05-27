@@ -14,7 +14,11 @@ public class Portal : CustomMonoBehaviour
 
     private void Finish()
     {
-        if (!LevelManager.Instance.TryLoadNextLevel())
+        if (LevelManager.Instance.TryLoadNextLevel())
+        {
+            GameManager.Instance.StartGame();
+        }
+        else
         {
             GameManager.Instance.ExitGame();
         }

@@ -113,9 +113,9 @@ public class Weapon : CustomMonoBehaviour, ICollectable
         Destroy(gameObject);
     }
 
-    public void Drop(Vector3 position)
+    public void Drop(Transform parent, Vector3 position)
     {
-        GetTransform().SetParent(null);
+        GetTransform().SetParent(parent);
         GetTransform().localPosition = position;
         GetTransform().localRotation = Quaternion.identity;
         GetTransform().localScale = Vector3.one;

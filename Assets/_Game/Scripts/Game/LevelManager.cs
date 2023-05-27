@@ -18,8 +18,6 @@ public class LevelManager : Singleton<LevelManager>
         {
             levelIndex += 1;
 
-            LoadLevel();
-
             return true;
         }
 

@@ -10,10 +10,8 @@ public class GameManager : Singleton<GameManager>
         GameWaited = 0,
         GameStarted = 1,
         GamePaused = 2,
+        GameFinished = 3,
     }
-
-    [SerializeField]
-    private CameraFollow _cameraFollow;
 
     private State _state;
     private Player _player;
@@ -38,11 +36,26 @@ public class GameManager : Singleton<GameManager>
         LevelManager.Instance.LoadLevel();
 
         _player = Instantiate(ResourceManager.Instance.PlayerPrefab);
-        _cameraFollow.SetTarget(_player.GetTransform());
 
         UIManager.Instance.CloseAll();
         UIManager.Instance.OpenUI<GameplayCanvas>();
         UIManager.Instance.OpenUI<ControlCanvas>();
+    }
+
+    public void FinishGame(bool isWon)
+    {
+        if (isWon)
+        {
+            // Win
+            UIManager.Instance.CloseAll();
+            UIManager.Instance.OpenUI<WinCanvas>();
+        }
+        else
+        {
+            // Lose
+            UIManager.Instance.CloseAll();
+            UIManager.Instance.OpenUI<LoseCanvas>();
+        }
     }
 
     public void ExitGame()
@@ -51,8 +64,10 @@ public class GameManager : Singleton<GameManager>
 
         LevelManager.Instance.UnloadLevel();
 
-        _player?.Despawn();
-        _cameraFollow.SetTarget(null);
+        if (_player != null)
+        {
+            _player.Despawn();
+        }
 
         WaitGame();
     }

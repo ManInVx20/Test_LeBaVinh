@@ -10,6 +10,7 @@ public class Room : CustomMonoBehaviour
     {
         public Transform[] DoorBlockTransformArray;
         public Transform[] CorridorBlockTransformArray;
+        public GameObject MinimapGameObject;
     }
 
     [Header("Room Data")]
@@ -70,6 +71,8 @@ public class Room : CustomMonoBehaviour
             {
                 Instantiate(doorPrefab, roomData.DoorBlockTransformArray[i]);
             }
+
+            roomData.MinimapGameObject.SetActive(false);
         }
         else
         {

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3480489276926540139}
   - component: {fileID: 3480489276926540135}
   m_Layer: 0
-  m_Name: Zombie
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3480489276926540134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 3480489277134713298}
   - {fileID: 3480489278472885096}
@@ -129,8 +129,8 @@ MonoBehaviour:
   _subWeaponHolder: {fileID: 6930100356991717595}
   _isFacingRight: 1
   _isMainWeapon: 0
-  _moveSpeed: 4
-  _maxHealth: 100
+  _moveSpeed: 3
+  _maxHealth: 200
   _maxEnergy: 0
   _maxShield: 0
   _restoreShieldTime: 2

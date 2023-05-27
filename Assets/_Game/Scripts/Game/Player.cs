@@ -39,6 +39,13 @@ public class Player : Character
         SetMoveDirection(moveDirection);
     }
 
+    public override void Despawn()
+    {
+        base.Despawn();
+
+        GameManager.Instance.FinishGame(false);
+    }
+
     public override void EnterCollision(Collider2D collider)
     {
         base.EnterCollision(collider);
