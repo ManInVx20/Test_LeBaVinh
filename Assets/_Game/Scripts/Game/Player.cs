@@ -76,9 +76,16 @@ public class Player : Character
     {
         if (_collectableItemList.Count > 0)
         {
-            _collectableItemList[0].Collect();
+            ICollectable collectableItem = _collectableItemList[0];
 
-            _collectableItemList.RemoveAt(0);
+            if (ResourceManager.Instance.TryChangeGold(-collectableItem.Price))
+            {
+                collectableItem.Price = 0;
+
+                collectableItem.Collect();
+
+                _collectableItemList.Remove(collectableItem);
+            }
         }
     }
 }

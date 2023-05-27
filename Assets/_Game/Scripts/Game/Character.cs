@@ -260,6 +260,25 @@ public class Character : PoolableObject
         _target = target;
     }
 
+    public void ChangeHealth(float value)
+    {
+        _health += value;
+        if (_health < 0.0f)
+        {
+            _health = 0.0f;
+        }
+        else if (_health > _maxHealth)
+        {
+            _health = _maxHealth;
+        }
+
+        OnCharacterHealthChanged?.Invoke(this, new OnCharacterHealthChangedArgs
+        {
+            Health = _health,
+            MaxHealth = _maxHealth
+        });
+    }
+
     public void ChangeEnergy(float value)
     {
         _energy += value;
@@ -277,6 +296,40 @@ public class Character : PoolableObject
             Energy = _energy,
             MaxEnergy = _maxEnergy
         });
+    }
+
+    public void ChangeMaxHealth(float value)
+    {
+        _health = _health / _maxHealth * (_maxHealth + value);
+        _maxHealth += value;
+        if (_maxHealth < 0.0f)
+        {
+            _maxHealth = 0.0f;
+        }
+
+        if (_health < 0.0f)
+        {
+            _health = 0.0f;
+        }
+        else if (_health > _maxHealth)
+        {
+            _health = _maxHealth;
+        }
+
+        OnCharacterHealthChanged?.Invoke(this, new OnCharacterHealthChangedArgs
+        {
+            Health = _health,
+            MaxHealth = _maxHealth
+        });
+    }
+
+    public void ChangeMoveSpeed(float value)
+    {
+        _moveSpeed += value;
+        if (_moveSpeed < 0.0f)
+        {
+            _moveSpeed = 0.0f;
+        }
     }
 
     public void Flip()
@@ -395,17 +448,7 @@ public class Character : PoolableObject
             });
         }
 
-        _health -= damageToHealth;
-        if (_health < 0.0f)
-        {
-            _health = 0.0f;
-        }
-
-        OnCharacterHealthChanged?.Invoke(this, new OnCharacterHealthChangedArgs
-        {
-            Health = _health,
-            MaxHealth = _maxHealth
-        });
+        ChangeHealth(-damageToHealth);
 
         if (IsDead())
         {

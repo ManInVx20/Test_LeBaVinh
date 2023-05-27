@@ -35,7 +35,10 @@ public class GameManager : Singleton<GameManager>
 
         LevelManager.Instance.LoadLevel();
 
-        _player = Instantiate(ResourceManager.Instance.PlayerPrefab);
+        if (_player == null)
+        {
+            _player = Instantiate(ResourceManager.Instance.PlayerPrefab);
+        }
 
         UIManager.Instance.CloseAll();
         UIManager.Instance.OpenUI<GameplayCanvas>();

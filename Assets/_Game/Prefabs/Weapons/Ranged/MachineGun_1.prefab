@@ -167,8 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6345b66620894c343824d15f24222baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _consumedEnergy: 3
-  _attackDamage: 10
+  <Price>k__BackingField: 0
+  _consumedEnergy: 2
+  _bulletDamage: 10
   _manualAttackTime: 0.2
   _autoAttackTimeAnimationCurve:
     serializedVersion: 2

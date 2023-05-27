@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Weapon : CustomMonoBehaviour, ICollectable
 {
+    [field: SerializeField]
+    public int Price { get; set; }
+
     [SerializeField]
     private float _consumedEnergy = 1.0f;
     [SerializeField]

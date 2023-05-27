@@ -4,5 +4,7 @@ using UnityEngine;
 
 public interface ICollectable
 {
+    public int Price { get; set; }
+
     void Collect();
 }
