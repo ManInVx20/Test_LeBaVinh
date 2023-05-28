@@ -332,6 +332,18 @@ public class Character : PoolableObject
         }
     }
 
+    public void ResetState()
+    {
+        _target = null;
+
+        SetMoveDirection(Vector3.right);
+
+        HandleLook();
+        HandleAim();
+
+        SetMoveDirection(Vector3.zero);
+    }
+
     public void Flip()
     {
         _isFacingRight = !_isFacingRight;

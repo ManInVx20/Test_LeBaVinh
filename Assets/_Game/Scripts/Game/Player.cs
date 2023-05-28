@@ -33,10 +33,14 @@ public class Player : Character
         {
             _joystick = FindObjectOfType<Joystick>();
         }
-        Vector2 moveInput = _joystick.GetInput().normalized;
-        moveDirection = new Vector3(moveInput.x, moveInput.y, 0.0f).normalized;
 
-        SetMoveDirection(moveDirection);
+        if (_joystick != null && _joystick.gameObject.activeInHierarchy)
+        {
+            Vector2 moveInput = _joystick.GetInput().normalized;
+            moveDirection = new Vector3(moveInput.x, moveInput.y, 0.0f).normalized;
+
+            SetMoveDirection(moveDirection);
+        }
     }
 
     public override void Despawn()

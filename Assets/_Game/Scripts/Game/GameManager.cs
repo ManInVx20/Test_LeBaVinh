@@ -25,6 +25,8 @@ public class GameManager : Singleton<GameManager>
     {
         _state = State.GameWaited;
 
+        LevelManager.Instance.ResetLevelIndex();
+
         UIManager.Instance.CloseAll();
         UIManager.Instance.OpenUI<MainMenuCanvas>();
     }
@@ -33,16 +35,21 @@ public class GameManager : Singleton<GameManager>
     {
         _state = State.GameStarted;
 
-        LevelManager.Instance.LoadLevel();
+        LevelManager.Instance.LoadLevel(() =>
+        {
+            UIManager.Instance.CloseAll();
+            UIManager.Instance.OpenUI<LoadingCanvas>();
+        }, () =>
+        {
+            UIManager.Instance.CloseAll();
+            UIManager.Instance.OpenUI<GameplayCanvas>();
+            UIManager.Instance.OpenUI<ControlCanvas>();
+        });
 
         if (_player == null)
         {
             _player = Instantiate(ResourceManager.Instance.PlayerPrefab);
         }
-
-        UIManager.Instance.CloseAll();
-        UIManager.Instance.OpenUI<GameplayCanvas>();
-        UIManager.Instance.OpenUI<ControlCanvas>();
     }
 
     public void FinishGame(bool isWon)

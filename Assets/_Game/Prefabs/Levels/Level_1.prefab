@@ -1386,6 +1386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startPoint: {fileID: 5386617895207623778}
+  _boss: {fileID: 0}
 --- !u!1001 &75977561965802023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1681,6 +1682,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3685679636351784202}
     m_Modifications:
+    - target: {fileID: 2647492905888406471, guid: 2a030d29532d7b546bc82bfe55e57f6b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5335459059541039145, guid: 2a030d29532d7b546bc82bfe55e57f6b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1951,6 +1956,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3685679636351784202}
     m_Modifications:
+    - target: {fileID: 2647492905888406471, guid: 2a030d29532d7b546bc82bfe55e57f6b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5335459059541039145, guid: 2a030d29532d7b546bc82bfe55e57f6b, type: 3}
       propertyPath: m_RootOrder
       value: 2

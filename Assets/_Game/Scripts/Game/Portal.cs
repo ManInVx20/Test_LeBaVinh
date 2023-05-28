@@ -16,6 +16,8 @@ public class Portal : CustomMonoBehaviour
     {
         if (LevelManager.Instance.TryLoadNextLevel())
         {
+            Player.Instance.ResetState();
+
             GameManager.Instance.StartGame();
         }
         else

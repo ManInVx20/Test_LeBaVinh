@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,11 +30,13 @@ public class LevelManager : Singleton<LevelManager>
         return levelIndex + 1;
     }
 
-    public void LoadLevel()
+    public void LoadLevel(Action onLoadStarted = null, Action onLoadCompleted = null)
     {
         UnloadLevel();
 
-        level = Instantiate(ResourceManager.Instance.LevelPrefabArray[levelIndex]);
+        onLoadStarted?.Invoke();
+
+        StartCoroutine(LoadLevelCoroutine(1.0f, onLoadCompleted));
     }
 
     public void UnloadLevel()
@@ -42,5 +45,19 @@ public class LevelManager : Singleton<LevelManager>
         {
             level.Despawn();
         }
+    }
+
+    public void ResetLevelIndex()
+    {
+        levelIndex = 0;
+    }
+
+    private IEnumerator LoadLevelCoroutine(float loadingTime, Action onLoadCompleted)
+    {
+        level = Instantiate(ResourceManager.Instance.LevelPrefabArray[levelIndex]);
+
+        yield return new WaitForSeconds(loadingTime);
+
+        onLoadCompleted?.Invoke();
     }
 }
