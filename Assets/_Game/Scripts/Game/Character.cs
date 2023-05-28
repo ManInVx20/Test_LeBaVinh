@@ -7,18 +7,21 @@ public class Character : PoolableObject
 {
     public class OnCharacterHealthChangedArgs : EventArgs
     {
+        public float Amount;
         public float Health;
         public float MaxHealth;
     }
     public event EventHandler<OnCharacterHealthChangedArgs> OnCharacterHealthChanged;
     public class OnCharacterEnergyChangedArgs : EventArgs
     {
+        public float Amount;
         public float Energy;
         public float MaxEnergy;
     }
     public event EventHandler<OnCharacterEnergyChangedArgs> OnCharacterEnergyChanged;
     public class OnCharacterShieldChangedArgs : EventArgs
     {
+        public float Amount;
         public float Shield;
         public float MaxShield;
     }
@@ -293,6 +296,7 @@ public class Character : PoolableObject
 
         OnCharacterEnergyChanged?.Invoke(this, new OnCharacterEnergyChangedArgs
         {
+            Amount = value,
             Energy = _energy,
             MaxEnergy = _maxEnergy
         });
@@ -318,6 +322,7 @@ public class Character : PoolableObject
 
         OnCharacterHealthChanged?.Invoke(this, new OnCharacterHealthChangedArgs
         {
+            Amount = value,
             Health = _health,
             MaxHealth = _maxHealth
         });
@@ -455,6 +460,7 @@ public class Character : PoolableObject
 
             OnCharacterShieldChanged?.Invoke(this, new OnCharacterShieldChangedArgs
             {
+                Amount = damage,
                 Shield = _shield,
                 MaxShield = _maxShield
             });

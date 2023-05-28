@@ -14,8 +14,16 @@ public class ResourceManager : Singleton<ResourceManager>
     [field: SerializeField]
     public Level[] LevelPrefabArray { get; private set; }
 
-    public event EventHandler OnGemChanged;
-    public event EventHandler OnGoldChanged;
+    public class OnGemChangedArgs : EventArgs
+    {
+        public float Amount;
+    }
+    public event EventHandler<OnGemChangedArgs> OnGemChanged;
+    public class OnGoldChangedArgs : EventArgs
+    {
+        public float Amount;
+    }
+    public event EventHandler<OnGoldChangedArgs> OnGoldChanged;
 
     private int _gem;
     private int _gold;
@@ -34,7 +42,10 @@ public class ResourceManager : Singleton<ResourceManager>
 
         _gem += value;
 
-        OnGemChanged?.Invoke(this, EventArgs.Empty);
+        OnGemChanged?.Invoke(this, new OnGemChangedArgs
+        {
+            Amount = value,
+        });
 
         return true;
     }
@@ -53,7 +64,10 @@ public class ResourceManager : Singleton<ResourceManager>
 
         _gold += value;
 
-        OnGoldChanged?.Invoke(this, EventArgs.Empty);
+        OnGoldChanged?.Invoke(this, new OnGoldChangedArgs
+        {
+            Amount = value,
+        });
 
         return true;
     }

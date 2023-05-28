@@ -5314,7 +5314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1037381281466379564, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
       propertyPath: <Price>k__BackingField
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2831255121616188997, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
       propertyPath: m_RootOrder
@@ -5388,7 +5388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1037381281466379564, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
       propertyPath: <Price>k__BackingField
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2831255121616188997, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
       propertyPath: m_RootOrder

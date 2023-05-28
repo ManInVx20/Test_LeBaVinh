@@ -13,7 +13,7 @@ public class GoldUI : CustomMonoBehaviour
         ResourceManager.Instance.OnGoldChanged += ResourceManager_OnGoldChanged;
     }
 
-    private void ResourceManager_OnGoldChanged(object sender, System.EventArgs args)
+    private void ResourceManager_OnGoldChanged(object sender, ResourceManager.OnGoldChangedArgs args)
     {
         _goldText.text = ResourceManager.Instance.GetGold().ToString();
     }
