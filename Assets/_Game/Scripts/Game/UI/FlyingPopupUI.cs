@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class FlyingPrizeUI : CustomMonoBehaviour
+public class FlyingPopupUI : CustomMonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI _valueText;
+    [SerializeField]
+    private float _despawnTime = 0.5f;
 
     public void Initialize(float value)
     {
@@ -23,7 +25,12 @@ public class FlyingPrizeUI : CustomMonoBehaviour
 
         _valueText.text = text;
 
-        Invoke(nameof(Despawn), 0.5f);
+        Invoke(nameof(Despawn), _despawnTime);
+    }
+
+    public void Initialize()
+    {
+        Invoke(nameof(Despawn), _despawnTime);
     }
 
     public void Despawn()

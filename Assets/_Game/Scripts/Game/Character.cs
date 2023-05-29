@@ -208,6 +208,11 @@ public class Character : PoolableObject
         return _characterAnimator;
     }
 
+    public Vector3 GetAimDirection()
+    {
+        return _aimDirection;
+    }
+
     public bool IsDead()
     {
         return _health <= 0.0f;

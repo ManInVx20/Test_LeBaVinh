@@ -7,9 +7,11 @@ public class PlayerUI : CustomMonoBehaviour
     [SerializeField]
     private Player _player;
     [SerializeField]
-    private FlyingPrizeUI _energyFlyingPrizeUIPrefab;
+    private Transform _aimDirectionUITransform;
     [SerializeField]
-    private FlyingPrizeUI _goldFlyingPrizeUIPrefab;
+    private FlyingPopupUI _energyFlyingPrizeUIPrefab;
+    [SerializeField]
+    private FlyingPopupUI _goldFlyingPrizeUIPrefab;
 
     private void Start()
     {
@@ -21,6 +23,11 @@ public class PlayerUI : CustomMonoBehaviour
     private void Update()
     {
         GetTransform().rotation = Quaternion.identity;
+
+        if (_player != null )
+        {
+            _aimDirectionUITransform.right = _player.GetTransform().rotation * _player.GetAimDirection();
+        }
     }
 
     private void Player_OnCharacterEnergyChanged(object sender, Character.OnCharacterEnergyChangedArgs args)

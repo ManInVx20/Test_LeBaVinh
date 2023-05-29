@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ResourceManager : Singleton<ResourceManager>
 {
+    [field: Header("Important Prefabs")]
     [field: SerializeField]
     public GameObject HorizontalWallPrefab { get; private set; }
     [field: SerializeField]
@@ -13,6 +14,10 @@ public class ResourceManager : Singleton<ResourceManager>
     public Player PlayerPrefab { get; private set; }
     [field: SerializeField]
     public Level[] LevelPrefabArray { get; private set; }
+
+    [field: Header("UI Prefabs")]
+    [field: SerializeField]
+    public FlyingPopupUI ClearUIPrefab { get; private set; }
 
     public class OnGemChangedArgs : EventArgs
     {

@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Price>k__BackingField: 0
   _consumedEnergy: 2
-  _bulletDamage: 12
+  _attackDamage: 10
   _manualAttackTime: 0.35
   _autoAttackTimeAnimationCurve:
     serializedVersion: 2
@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3451439266172631552, guid: 1c313a9325d4790449bdb63f632b0875, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.2
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 3451439266172631552, guid: 1c313a9325d4790449bdb63f632b0875, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

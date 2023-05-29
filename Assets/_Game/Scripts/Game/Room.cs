@@ -37,12 +37,22 @@ public class Room : CustomMonoBehaviour
     [SerializeField]
     private BattleSystem _battleSystem;
 
+    private FlyingPopupUI _clearUIGameObject;
+
     private void Start()
     {
         _battleSystem.OnBattleStart += BattleSystem_OnBattleStart;
         _battleSystem.OnBattleOver += BattleSystem_OnBattleOver;
 
         BuildBlocks();
+    }
+
+    private void OnDestroy()
+    {
+        if (_clearUIGameObject != null)
+        {
+            Destroy(_clearUIGameObject);
+        }
     }
 
     private void BattleSystem_OnBattleStart(object sender, EventArgs args)
@@ -53,6 +63,9 @@ public class Room : CustomMonoBehaviour
     private void BattleSystem_OnBattleOver(object sender, EventArgs args)
     {
         DespawnDoorBlocks();
+
+        _clearUIGameObject = Instantiate(ResourceManager.Instance.ClearUIPrefab, UIManager.Instance.GetUI<GameplayCanvas>().GetTransform());
+        _clearUIGameObject.Initialize();
     }
 
     private void BuildBlocks()

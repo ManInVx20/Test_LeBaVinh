@@ -67,10 +67,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5027449348144612220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d8e00cd95a686648b943551e4b3d9ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d38ac06b0650044a9ecda112ddb64d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _valueText: {fileID: 8458576275446103670}
+  _despawnTime: 0.5
 --- !u!1 &6522192822976952356
 GameObject:
   m_ObjectHideFlags: 0

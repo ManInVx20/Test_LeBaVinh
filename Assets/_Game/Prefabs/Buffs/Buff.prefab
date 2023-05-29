@@ -360,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3451439266172631552, guid: 1c313a9325d4790449bdb63f632b0875, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3451439266172631552, guid: 1c313a9325d4790449bdb63f632b0875, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -382,6 +382,10 @@ PrefabInstance:
       propertyPath: _collectableGameObject
       value: 
       objectReference: {fileID: 308612452542233351}
+    - target: {fileID: 6335823487070067792, guid: 1c313a9325d4790449bdb63f632b0875, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c313a9325d4790449bdb63f632b0875, type: 3}
 --- !u!224 &7964346564124969161 stripped
