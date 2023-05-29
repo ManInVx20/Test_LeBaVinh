@@ -24,10 +24,17 @@ public class Bullet : PoolableObject
 
     private void Update()
     {
-        _despawnTimer += Time.deltaTime;
-        if (_despawnTimer >= _despawnTime)
+        if (GameManager.Instance.IsGameWaited())
         {
-            Despawn();
+            Destroy(gameObject);
+        }
+        else
+        {
+            _despawnTimer += Time.deltaTime;
+            if (_despawnTimer >= _despawnTime)
+            {
+                Despawn();
+            }
         }
     }
 

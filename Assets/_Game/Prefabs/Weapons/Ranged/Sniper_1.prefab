@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Price>k__BackingField: 1
   _consumedEnergy: 10
-  _bulletDamage: 30
+  _attackDamage: 30
   _manualAttackTime: 1
   _autoAttackTimeAnimationCurve:
     serializedVersion: 2

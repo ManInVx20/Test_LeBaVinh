@@ -25,6 +25,11 @@ public class PlayerUI : CustomMonoBehaviour
 
     private void Player_OnCharacterEnergyChanged(object sender, Character.OnCharacterEnergyChangedArgs args)
     {
+        if (this == null)
+        {
+            return;
+        }
+
         if (args.Amount > 0.0f)
         {
             Instantiate(_energyFlyingPrizeUIPrefab, GetTransform()).Initialize(args.Amount);
@@ -33,6 +38,11 @@ public class PlayerUI : CustomMonoBehaviour
 
     private void ResourceManager_OnGoldChanged(object sender, ResourceManager.OnGoldChangedArgs args)
     {
+        if (this == null)
+        {
+            return;
+        }
+
         if (args.Amount > 0.0f)
         {
             Instantiate(_goldFlyingPrizeUIPrefab, GetTransform()).Initialize(args.Amount);

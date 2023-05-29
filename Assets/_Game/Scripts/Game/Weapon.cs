@@ -11,7 +11,7 @@ public class Weapon : CustomMonoBehaviour, ICollectable
     [SerializeField]
     private float _consumedEnergy = 1.0f;
     [SerializeField]
-    private float _bulletDamage = 10.0f;
+    private float _attackDamage = 10.0f;
     [SerializeField]
     private float _manualAttackTime = 0.5f;
     [SerializeField]
@@ -135,7 +135,7 @@ public class Weapon : CustomMonoBehaviour, ICollectable
 
     public float GetAttackDamage()
     {
-        return _bulletDamage;
+        return _attackDamage;
     }
 
     public virtual void Collect()

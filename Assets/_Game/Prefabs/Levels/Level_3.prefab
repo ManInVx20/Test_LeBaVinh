@@ -3553,6 +3553,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7140204952861497440}
     m_Modifications:
+    - target: {fileID: 6105089283973156432, guid: 62e095eaba96dde42a45d8d3209ad33b, type: 3}
+      propertyPath: <Price>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7259030240670984485, guid: 62e095eaba96dde42a45d8d3209ad33b, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3615,6 +3619,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7140204952861497440}
     m_Modifications:
+    - target: {fileID: 1676888896883645105, guid: 7b89c69116cafa447aaabe1e1a044230, type: 3}
+      propertyPath: <Price>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2828650074472152516, guid: 7b89c69116cafa447aaabe1e1a044230, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -4053,6 +4061,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7140204952861497440}
     m_Modifications:
+    - target: {fileID: 613998281616103047, guid: a59577d99d7f998489d5d8a298ea276e, type: 3}
+      propertyPath: <Price>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4071746642945847792, guid: a59577d99d7f998489d5d8a298ea276e, type: 3}
       propertyPath: m_Name
       value: Shotgun_1
@@ -5314,8 +5326,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1037381281466379564, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
       propertyPath: <Price>k__BackingField
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1037381281466379564, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
+      propertyPath: <Sprite>k__BackingField
+      value: 
+      objectReference: {fileID: 21300000, guid: e1683a1acccb446889b2eb95ce0cbaae, type: 3}
     - target: {fileID: 2831255121616188997, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -5388,7 +5404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1037381281466379564, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
       propertyPath: <Price>k__BackingField
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2831255121616188997, guid: a3bc71ed8a9a444479af63174ce40b7d, type: 3}
       propertyPath: m_RootOrder

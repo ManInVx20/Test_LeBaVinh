@@ -6,6 +6,8 @@ public class Buff : CustomMonoBehaviour, ICollectable
 {
     [field: SerializeField]
     public int Price { get; set; }
+    [field: SerializeField]
+    public Sprite Sprite { get; private set; }
 
     [System.Serializable]
     private enum Type

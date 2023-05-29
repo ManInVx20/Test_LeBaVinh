@@ -9,6 +9,7 @@ public class Player : Character
 
     private Joystick _joystick;
     private List<ICollectable> _collectableItemList = new List<ICollectable>();
+    private List<Buff> _buffList = new List<Buff>();
 
     public override void Initialize()
     {
@@ -89,7 +90,17 @@ public class Player : Character
                 collectableItem.Collect();
 
                 _collectableItemList.Remove(collectableItem);
+
+                if (collectableItem is Buff)
+                {
+                    _buffList.Add(collectableItem as Buff);
+                }
             }
         }
+    }
+
+    public List<Buff> GetBuffList()
+    {
+        return _buffList;
     }
 }

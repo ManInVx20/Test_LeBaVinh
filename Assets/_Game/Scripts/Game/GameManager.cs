@@ -21,6 +21,11 @@ public class GameManager : Singleton<GameManager>
         WaitGame();
     }
 
+    public bool IsGameWaited()
+    {
+        return _state == State.GameWaited;
+    }
+
     public void WaitGame()
     {
         _state = State.GameWaited;

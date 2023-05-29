@@ -26,7 +26,10 @@ public class ControlCanvas : UICanvas
         });
         _autoAttackToggle.onValueChanged.AddListener((value) =>
         {
-            Player.Instance?.ToggleAutoAttack();
+            if (Player.Instance != null && Player.Instance.IsAutoAttacking() != value)
+            {
+                Player.Instance?.ToggleAutoAttack();
+            }
         });
         _swapWeaponButton.onClick.AddListener(() =>
         {
@@ -36,5 +39,15 @@ public class ControlCanvas : UICanvas
         {
             Player.Instance?.Interact();
         });
+    }
+
+    public override void Setup()
+    {
+        base.Setup();
+
+        if (Player.Instance != null)
+        {
+            _autoAttackToggle.isOn = Player.Instance.IsAutoAttacking();
+        }
     }
 }
