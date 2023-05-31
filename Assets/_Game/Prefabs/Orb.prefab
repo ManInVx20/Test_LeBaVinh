@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 130712000765286093}
   - component: {fileID: 5011821726698937644}
   - component: {fileID: 130712000765286095}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   _type: 1
   _flySpeed: 5
   _despawnTime: 3
-  _hitVFXPrefab: {fileID: 6407102160560226964, guid: 4b7024f64bf8e2044aab355738b748c3, type: 3}
+  _trailRenderer: {fileID: 0}
 --- !u!1 &8654266542606574567
 GameObject:
   m_ObjectHideFlags: 0

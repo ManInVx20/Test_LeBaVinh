@@ -64,8 +64,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cb10e42757a214c8056b6a506ae9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Price>k__BackingField: 0
   _consumedEnergy: 0
-  _bulletDamage: 10
+  _attackDamage: 10
   _manualAttackTime: 0.5
   _autoAttackTimeAnimationCurve:
     serializedVersion: 2
@@ -185,7 +186,7 @@ GameObject:
   - component: {fileID: 4555119283519085415}
   - component: {fileID: 7505902997890351178}
   - component: {fileID: 6042822327104349545}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WeaponHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

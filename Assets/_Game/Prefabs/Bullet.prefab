@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 130712000765286093}
   - component: {fileID: 130712000765286092}
   - component: {fileID: 130712000765286095}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   _type: 0
   _flySpeed: 10
   _despawnTime: 3
-  _hitVFXPrefab: {fileID: 6407102160560226964, guid: a4b567944b4250e47a9d2ab434cd9726, type: 3}
+  _trailRenderer: {fileID: 0}
 --- !u!1 &8654266542606574567
 GameObject:
   m_ObjectHideFlags: 0

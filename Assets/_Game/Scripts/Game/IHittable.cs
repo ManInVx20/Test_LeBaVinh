@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IHit 
+public interface IHittable 
 {
-    void OnHit();
+    bool IsHit(Character owner, float damage);
 }

@@ -11,14 +11,18 @@ public class HitVFX : PoolableObject
         _particleSystem = GetComponent<ParticleSystem>();
     }
 
-    private void OnParticleSystemStopped()
-    {
-        ReturnToPool();
-    }
-
     public void Initialize(Transform refTransform)
     {
         GetTransform().position = refTransform.position;
         GetTransform().localScale = refTransform.localScale;
+
+        _particleSystem.Play();
+
+        Invoke(nameof(Despawn), 1.0f);
+    }
+
+    public void Despawn()
+    {
+        ReturnToPool();
     }
 }

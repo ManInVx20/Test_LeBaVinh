@@ -49,27 +49,12 @@ public class Bullet : PoolableObject
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        //TODO:
-        if (!gameObject.activeInHierarchy)
+        if (Cache.TryGetHittableComponent2D(collider, out IHittable component))
         {
-            return;
-        }
-
-        // Hit character
-        if (collider.GetType().Equals(typeof(BoxCollider2D)))
-        {
-            if (Cache.TryGetCachedComponent<Character>(collider, out Character character) && IsValidTarget(character))
+            if (component.IsHit(_owner, _damage))
             {
-                character.Hit(_damage);
-
                 Despawn();
             }
-        }
-
-        // Hit obstacle
-        if (Cache.TryGetCachedComponent<Obstacle>(collider, out _))
-        {
-            Despawn();
         }
     }
 
@@ -86,10 +71,6 @@ public class Bullet : PoolableObject
 
     private void Despawn()
     {
-        //Transform hitVFXTransform = Instantiate(_hitVFXPrefab).GetComponent<Transform>();
-        //hitVFXTransform.position = GetTransform().position;
-        //hitVFXTransform.localScale = GetTransform().localScale;
-
         switch (_type)
         {
             case Type.Bullet:
@@ -115,10 +96,5 @@ public class Bullet : PoolableObject
         {
             Destroy(gameObject);
         }
-    }
-
-    private bool IsValidTarget(Character character)
-    {
-        return !character.IsDead() && !character.GetType().Equals(_owner.GetType());
     }
 }

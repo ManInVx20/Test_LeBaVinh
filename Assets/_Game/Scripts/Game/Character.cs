@@ -442,11 +442,11 @@ public class Character : PoolableObject
         }
     }
 
-    public void Hit(float damage)
+    public bool IsHit(Character owner, float damage)
     {
-        if (IsDead())
+        if (IsDead() || owner.GetType().Equals(GetType()))
         {
-            return;
+            return false;
         }
 
         _restoreShieldTimer = 0.0f;
@@ -480,6 +480,8 @@ public class Character : PoolableObject
         {
             Die();
         }
+
+        return true;
     }
 
     private void HandleLook()

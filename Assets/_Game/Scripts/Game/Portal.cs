@@ -6,7 +6,7 @@ public class Portal : CustomMonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider is CapsuleCollider2D && Cache.TryGetCachedComponent<Player>(collider, out _))
+        if (Cache.TryGetCachedComponent<Character>(collider, out Character character) && character is Player)
         {
             Finish();
         }
