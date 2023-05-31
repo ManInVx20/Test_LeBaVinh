@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3480489276926540132}
   - component: {fileID: 3480489276926540136}
   - component: {fileID: 3480489276926540139}
-  - component: {fileID: 3480489276926540135}
+  - component: {fileID: 7168023131802895473}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -113,7 +113,7 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3480489276926540135
+--- !u!114 &7168023131802895473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,12 +122,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3480489276926540134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a544a1008e6e4c141bd5725221ab67e0, type: 3}
+  m_Script: {fileID: 11500000, guid: fce674470934b3e4497504299d0688aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _characterAnimator: {fileID: 7050272302486937895}
   _mainWeaponHolder: {fileID: 8280191936000749716}
   _subWeaponHolder: {fileID: 6930100356991717595}
+  _mainWeaponItem: {fileID: 0}
+  _subWeaponItem: {fileID: 5897640453650506459}
   _isFacingRight: 1
   _isMainWeapon: 0
   _moveSpeed: 4
@@ -136,11 +138,15 @@ MonoBehaviour:
   _maxShield: 0
   _restoreShieldTime: 2
   _restoreShieldValue: 5
+  <EnergyPrize>k__BackingField: 10
+  <GoldPrize>k__BackingField: 1
+  _type: 0
+  _obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
   _attackTimeRange:
-    _min: 2
-    _max: 4
-  _energyPrize: 20
-  _goldPrize: 1
+    _min: 1
+    _max: 3
 --- !u!1 &3480489277134713293
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca0c6ab6ebe48e45badee8ad91fb365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: {fileID: 3480489276926540135}
+  _character: {fileID: 7168023131802895473}
   _range: 5
 --- !u!1 &6142036059516724082
 GameObject:
@@ -227,6 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8282252298590519761}
   - component: {fileID: 2846953129662854840}
+  - component: {fileID: 3860804563695510705}
   m_Layer: 6
   m_Name: MinimapIcon
   m_TagString: Untagged
@@ -299,6 +306,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3860804563695510705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6142036059516724082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7731e07cf99cd024e8d559dda0a8c696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3480489277189493829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386,6 +405,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5792059030233089182, guid: 0800dc8a24fde08408e2718854b3fa41, type: 3}
   m_PrefabInstance: {fileID: 3480489277189493829}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5897640453650506459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7031682732159694494, guid: 0800dc8a24fde08408e2718854b3fa41, type: 3}
+  m_PrefabInstance: {fileID: 3480489277189493829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53cb10e42757a214c8056b6a506ae9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4437874146651844269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -396,7 +426,7 @@ PrefabInstance:
     - target: {fileID: 1120233642071857588, guid: 2a9ecf1814f0ef24db28593b6ea0a65b, type: 3}
       propertyPath: _enemy
       value: 
-      objectReference: {fileID: 3480489276926540135}
+      objectReference: {fileID: 7168023131802895473}
     - target: {fileID: 1680946929559444737, guid: 2a9ecf1814f0ef24db28593b6ea0a65b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -479,6 +509,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1680946929559444737, guid: 2a9ecf1814f0ef24db28593b6ea0a65b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729425280203504677, guid: 2a9ecf1814f0ef24db28593b6ea0a65b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729425280203504677, guid: 2a9ecf1814f0ef24db28593b6ea0a65b, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6685470308655606886, guid: 2a9ecf1814f0ef24db28593b6ea0a65b, type: 3}

@@ -15,6 +15,12 @@ public class GameManager : Singleton<GameManager>
 
     private State _state;
     private Player _player;
+    private CameraFollow[] _cameraFollowArray;
+
+    private void Awake()
+    {
+        _cameraFollowArray = FindObjectsOfType<CameraFollow>();
+    }
 
     private void Start()
     {
@@ -26,11 +32,26 @@ public class GameManager : Singleton<GameManager>
         return _state == State.GameWaited;
     }
 
+    public bool IsGameStarted()
+    {
+        return _state == State.GameStarted;
+    }
+
+    public bool IsGameFinished()
+    {
+        return _state == State.GameFinished;
+    }
+
     public void WaitGame()
     {
         _state = State.GameWaited;
 
         LevelManager.Instance.ResetLevelIndex();
+
+        for (int i = 0; i < _cameraFollowArray.Length; i++)
+        {
+            _cameraFollowArray[i].SetTarget(null);
+        }
 
         UIManager.Instance.CloseAll();
         UIManager.Instance.OpenUI<MainMenuCanvas>();
@@ -46,24 +67,39 @@ public class GameManager : Singleton<GameManager>
             UIManager.Instance.OpenUI<LoadingCanvas>();
         }, () =>
         {
+            if (_player == null)
+            {
+                _player = Instantiate(ResourceManager.Instance.PlayerPrefab);
+            }
+
+            if (_player != null)
+            {
+                _player.GetTransform().position = FindObjectOfType<Level>().StartPosition;
+
+                for (int i = 0; i < _cameraFollowArray.Length; i++)
+                {
+                    _cameraFollowArray[i].SetTarget(Player.Instance.GetTransform());
+                }
+            }
+
+
             UIManager.Instance.CloseAll();
             UIManager.Instance.OpenUI<GameplayCanvas>();
             UIManager.Instance.OpenUI<ControlCanvas>();
         });
-
-        if (_player == null)
-        {
-            _player = Instantiate(ResourceManager.Instance.PlayerPrefab);
-        }
     }
 
     public void FinishGame(bool isWon)
     {
+        _state = State.GameFinished;
+
         if (isWon)
         {
             // Win
             UIManager.Instance.CloseAll();
             UIManager.Instance.OpenUI<WinCanvas>();
+
+            Player.Instance.SetMoveDirection(Vector3.zero);
         }
         else
         {

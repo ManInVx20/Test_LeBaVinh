@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class EnemyPatrolState : IEnemyState
+public class MobPatrolState : IEnemyState
 {
     private float _changeStateTimer;
     private float _changeStateTime;
+    private Vector3 _moveDirection;
 
     public void Enter(Enemy enemy)
     {
-        enemy.SetMoveDirection(Utilities.GetRandomDirection2D());
+        _moveDirection = Utilities.GetRandomDirection2D();
+        enemy.SetMoveDirection(_moveDirection);
 
         _changeStateTimer = 0.0f;
         _changeStateTime = Random.Range(1.0f, 3.0f);
@@ -24,13 +27,22 @@ public class EnemyPatrolState : IEnemyState
 
             if (Random.Range(0, 3) > 0)
             {
-                enemy.ChangeState(enemy.IdleState);
+                enemy.ChangeState(((Mob)enemy).IdleState);
             }
             else
             {
-                enemy.ChangeState(enemy.PatrolState);
+                enemy.ChangeState(((Mob)enemy).PatrolState);
             }
         }
+        else
+        {
+            while (enemy.HasObstacle(_moveDirection))
+            {
+                _moveDirection = Utilities.GetRandomDirection2D();
+            }
+
+            enemy.SetMoveDirection(_moveDirection);
+        }    
     }
 
     public void Exit(Enemy enemy)

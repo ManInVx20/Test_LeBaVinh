@@ -12,8 +12,9 @@ public class Buff : CustomMonoBehaviour, ICollectable
     [System.Serializable]
     private enum Type
     {
-        HaxHealth = 0,
-        MoveSpeed = 1,
+        MoveSpeed = 0,
+        HaxHealth = 1,
+        MaxShield = 2,
     }
 
     [SerializeField]
@@ -23,12 +24,16 @@ public class Buff : CustomMonoBehaviour, ICollectable
     {
         switch (_type)
         {
+            case Type.MoveSpeed:
+                Player.Instance.ChangeMoveSpeed(2.0f);
+
+                break;
             case Type.HaxHealth:
                 Player.Instance.ChangeMaxHealth(50.0f);
 
                 break;
-            case Type.MoveSpeed:
-                Player.Instance.ChangeMoveSpeed(2.0f);
+            case Type.MaxShield:
+                Player.Instance.ChangeMaxShield(10.0f);
 
                 break;
         }

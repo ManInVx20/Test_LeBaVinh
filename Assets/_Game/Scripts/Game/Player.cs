@@ -20,6 +20,11 @@ public class Player : Character
         _joystick = FindObjectOfType<Joystick>();
     }
 
+    public override void Begin()
+    {
+        base.Begin();
+    }
+
     public override void Execute()
     {
         base.Execute();
@@ -42,6 +47,13 @@ public class Player : Character
 
             SetMoveDirection(moveDirection);
         }
+    }
+
+    public override void Die()
+    {
+        base.Die();
+
+        UIManager.Instance.CloseUI<ControlCanvas>();
     }
 
     public override void Despawn()

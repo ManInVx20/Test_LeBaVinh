@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Price>k__BackingField: 0
-  _consumedEnergy: 2
+  _consumedEnergy: 1
   _attackDamage: 10
   _manualAttackTime: 0.35
   _autoAttackTimeAnimationCurve:

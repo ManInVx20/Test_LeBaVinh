@@ -1,91 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : Character
 {
-    public EnemyIdleState IdleState { get; } = new EnemyIdleState();
-    public EnemyPatrolState PatrolState { get; } = new EnemyPatrolState();
-
-    [FloatRangeSlider(0.1f, 100.0f)]
-    [SerializeField]
-    private FloatRange _attackTimeRange = new FloatRange();
-
-    [Header("Prize")]
-    [SerializeField]
-    private float _energyPrize = 10.0f;
-    [SerializeField]
-    private int _goldPrize = 1;
-
-    private IEnemyState _state;
-    private float _attackTimer;
-    private float _attackTime;
-
-    public override void Begin()
+    [System.Serializable]
+    public enum Type
     {
-        base.Begin();
-
-        ChangeState(IdleState);
-
-        _attackTimer = 0.0f;
-        _attackTime = _attackTimeRange.RandomValueInRange;
-
-        Hide();
+        Zombie = 0,
+        Witch =1,
     }
 
-    public override void Execute()
-    {
-        base.Execute();
+    public IEnemyState State { get; private set; }
 
-        if (_state != null)
-        {
-            _state.Execute(this);
+    [field: Header("Prize")]
+    [field: SerializeField]
+    public float EnergyPrize { get; private set; } = 10.0f;
+    [field: SerializeField]
+    public int GoldPrize { get; private set; } = 1;
 
-            HandleAttack();
-        }
-    }
-
-    public override void Die()
-    {
-        base.Die();
-
-        ChangeState(null);
-
-        Player.Instance.ChangeEnergy(_energyPrize);
-
-        ResourceManager.Instance.TryChangeGold(_goldPrize);
-    }
+    [Header("Other")]
+    [SerializeField]
+    private Type _type;
+    [SerializeField]
+    private LayerMask _obstacleLayerMask;
 
     public void ChangeState(IEnemyState newState)
     {
-        _state?.Exit(this);
+        State?.Exit(this);
 
-        _state = newState;
+        State = newState;
 
-        _state?.Enter(this);
+        State?.Enter(this);
     }
 
-    public void Spawn()
+    public bool HasObstacle(Vector3 direction)
     {
-        Show();
-    }
-
-    private void HandleAttack()
-    {
-        _attackTimer += Time.deltaTime;
-        if (_attackTimer >= _attackTime)
+        float distance = 1.0f;
+        RaycastHit2D raycastHit = Physics2D.Raycast(GetTransform().position, direction, distance, _obstacleLayerMask);
+        if (raycastHit.collider != null)
         {
-            _attackTimer = 0.0f;
-            _attackTime = _attackTimeRange.RandomValueInRange;
-
-            if (IsManualAttacking())
-            {
-                DisableManualAttack();
-            }
-            else
-            {
-                EnableManualAttack();
-            }
+            return true;
         }
+
+        return false;
     }
 }

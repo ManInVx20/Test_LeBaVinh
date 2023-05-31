@@ -15,6 +15,18 @@ public class ResourceManager : Singleton<ResourceManager>
     [field: SerializeField]
     public Level[] LevelPrefabArray { get; private set; }
 
+    [field: Header("Pools")]
+    [field: SerializeField]
+    public EnemyPool ZombieEnemyPool { get; private set; }
+    [field: SerializeField]
+    public EnemyPool WitchEnemyPool { get; private set; }
+    [field: SerializeField]
+    public HitVFXPool BulletVFXPool { get; private set; }
+    [field: SerializeField]
+    public HitVFXPool OrbtVFXPool { get; private set; }
+    [field: SerializeField]
+    public HitVFXPool SlashVFXPool { get; private set; }
+
     [field: Header("UI Prefabs")]
     [field: SerializeField]
     public FlyingPopupUI ClearUIPrefab { get; private set; }

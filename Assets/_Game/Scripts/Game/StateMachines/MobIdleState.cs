@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyIdleState : IEnemyState
+public class MobIdleState : IEnemyState
 {
     private float _changeStateTimer;
     private float _changeStateTime;
@@ -22,7 +22,7 @@ public class EnemyIdleState : IEnemyState
         {
             _changeStateTimer = 0.0f;
 
-            enemy.ChangeState(enemy.PatrolState);
+            enemy.ChangeState(((Mob)enemy).PatrolState);
         }
     }
 

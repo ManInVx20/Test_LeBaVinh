@@ -6,27 +6,15 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Level : CustomMonoBehaviour
 {
+    public Vector3 StartPosition => _startPoint.position;
+
     [SerializeField]
     private Transform _startPoint;
     [SerializeField]
     private Enemy _boss;
 
-    private CameraFollow[] _cameraFollowArray;
-
-    private void Awake()
-    {
-        _cameraFollowArray = FindObjectsOfType<CameraFollow>();
-    }
-
     private void Start()
     {
-        Player.Instance.GetTransform().position = _startPoint.position;
-
-        for (int i = 0; i < _cameraFollowArray.Length; i++)
-        {
-            _cameraFollowArray[i].SetTarget(Player.Instance.GetTransform());
-        }
-
         if (_boss != null)
         {
             _boss.OnCharacterDespawned += Boss_OnCharacterDespawned;
@@ -42,11 +30,6 @@ public class Level : CustomMonoBehaviour
 
     public void Despawn()
     {
-        for (int i = 0; i < _cameraFollowArray.Length; i++)
-        {
-            _cameraFollowArray[i].SetTarget(null);
-        }
-
         Destroy(gameObject);
     }
 }

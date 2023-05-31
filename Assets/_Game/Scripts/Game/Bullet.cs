@@ -5,12 +5,21 @@ using UnityEngine;
 
 public class Bullet : PoolableObject
 {
+    [Serializable]
+    private enum Type
+    {
+        Bullet = 0,
+        Orb = 1,
+    }
+
+    [SerializeField]
+    private Type _type;
     [SerializeField]
     private float _flySpeed = 10.0f;
     [SerializeField]
     private float _despawnTime = 3.0f;
     [SerializeField]
-    private ParticleSystem _hitVFXPrefab;
+    private TrailRenderer _trailRenderer;
 
     private Rigidbody2D _rb;
     private float _despawnTimer;
@@ -40,11 +49,13 @@ public class Bullet : PoolableObject
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        //TODO:
         if (!gameObject.activeInHierarchy)
         {
             return;
         }
 
+        // Hit character
         if (collider.GetType().Equals(typeof(BoxCollider2D)))
         {
             if (Cache.TryGetCachedComponent<Character>(collider, out Character character) && IsValidTarget(character))
@@ -55,6 +66,7 @@ public class Bullet : PoolableObject
             }
         }
 
+        // Hit obstacle
         if (Cache.TryGetCachedComponent<Obstacle>(collider, out _))
         {
             Despawn();
@@ -74,12 +86,29 @@ public class Bullet : PoolableObject
 
     private void Despawn()
     {
-        Transform hitVFXTransform = Instantiate(_hitVFXPrefab).GetComponent<Transform>();
-        hitVFXTransform.position = GetTransform().position;
-        hitVFXTransform.localScale = GetTransform().localScale;
+        //Transform hitVFXTransform = Instantiate(_hitVFXPrefab).GetComponent<Transform>();
+        //hitVFXTransform.position = GetTransform().position;
+        //hitVFXTransform.localScale = GetTransform().localScale;
+
+        switch (_type)
+        {
+            case Type.Bullet:
+                ResourceManager.Instance.BulletVFXPool.GetPrefabInstance().Initialize(GetTransform());
+
+                break;
+            case Type.Orb:
+                ResourceManager.Instance.OrbtVFXPool.GetPrefabInstance().Initialize(GetTransform());
+
+                break;
+        }
 
         if (Origin.Exist())
         {
+            if (_trailRenderer != null)
+            {
+                _trailRenderer.Clear();
+            }
+
             ReturnToPool();
         }
         else

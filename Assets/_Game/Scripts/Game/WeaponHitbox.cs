@@ -15,9 +15,7 @@ public class WeaponHitbox : CustomMonoBehaviour
         {
             if (IsValidTarget(character))
             {
-                Transform hitVFXTransform = Instantiate(_hitVFXPrefab).GetComponent<Transform>();
-                hitVFXTransform.position = GetTransform().position;
-                hitVFXTransform.localScale = GetTransform().localScale;
+                ResourceManager.Instance.SlashVFXPool.GetPrefabInstance().Initialize(GetTransform());
 
                 character.Hit(_weapon.GetAttackDamage());
             }

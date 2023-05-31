@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca0c6ab6ebe48e45badee8ad91fb365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _character: {fileID: 4576429723667413532}
+  _character: {fileID: 9037683490915244027}
   _range: 5
 --- !u!1 &4576429723667413535
 GameObject:
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4576429723667413531}
   - component: {fileID: 4576429723667413530}
   - component: {fileID: 4576429723667413533}
-  - component: {fileID: 4576429723667413532}
+  - component: {fileID: 9037683490915244027}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -189,7 +189,7 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4576429723667413532
+--- !u!114 &9037683490915244027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,25 +198,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 4576429723667413535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a544a1008e6e4c141bd5725221ab67e0, type: 3}
+  m_Script: {fileID: 11500000, guid: fce674470934b3e4497504299d0688aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _characterAnimator: {fileID: 7747266011047778739}
   _mainWeaponHolder: {fileID: 8700231688591460352}
   _subWeaponHolder: {fileID: 7672130056549509199}
+  _mainWeaponItem: {fileID: 6014355396931469182}
+  _subWeaponItem: {fileID: 0}
   _isFacingRight: 1
   _isMainWeapon: 1
-  _moveSpeed: 4
+  _moveSpeed: 3
   _maxHealth: 80
   _maxEnergy: 0
   _maxShield: 0
   _restoreShieldTime: 2
   _restoreShieldValue: 5
+  <EnergyPrize>k__BackingField: 10
+  <GoldPrize>k__BackingField: 1
+  _type: 0
+  _obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
   _attackTimeRange:
     _min: 1
     _max: 3
-  _energyPrize: 20
-  _goldPrize: 1
 --- !u!1 &6813397332041511210
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525867975086997724}
   - component: {fileID: 7778363622546396213}
+  - component: {fileID: 8646804532150154079}
   m_Layer: 6
   m_Name: MinimapIcon
   m_TagString: Untagged
@@ -299,6 +306,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8646804532150154079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813397332041511210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7731e07cf99cd024e8d559dda0a8c696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4576429724063921853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,6 +396,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5134050840323636925, guid: 01ece548a41713642b24a28dc9f2c8f2, type: 3}
   m_PrefabInstance: {fileID: 4576429724063921853}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6014355396931469182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7851452866145536451, guid: 01ece548a41713642b24a28dc9f2c8f2, type: 3}
+  m_PrefabInstance: {fileID: 4576429724063921853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6e38dda403094479b966131fb67793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7672130056549509199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6195368918797082354, guid: 01ece548a41713642b24a28dc9f2c8f2, type: 3}
@@ -392,7 +422,7 @@ PrefabInstance:
     - target: {fileID: 1120233642071857588, guid: 2a9ecf1814f0ef24db28593b6ea0a65b, type: 3}
       propertyPath: _enemy
       value: 
-      objectReference: {fileID: 4576429723667413532}
+      objectReference: {fileID: 9037683490915244027}
     - target: {fileID: 1680946929559444737, guid: 2a9ecf1814f0ef24db28593b6ea0a65b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

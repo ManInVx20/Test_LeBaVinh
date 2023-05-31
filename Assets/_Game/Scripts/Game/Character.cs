@@ -38,6 +38,10 @@ public class Character : PoolableObject
     private Transform _mainWeaponHolder;
     [SerializeField]
     private Transform _subWeaponHolder;
+    [SerializeField]
+    private Weapon _mainWeaponItem;
+    [SerializeField]
+    private Weapon _subWeaponItem;
 
     [Header("Properties")]
     [SerializeField]
@@ -61,12 +65,12 @@ public class Character : PoolableObject
     private Vector3 _moveDirection;
     private Character _target;
     private Vector3 _aimDirection;
-    private Weapon _mainWeapon;
-    private Weapon _subWeapon;
     private float _health;
     private float _energy;
     private float _shield;
     private float _restoreShieldTimer;
+    private Weapon _mainWeapon;
+    private Weapon _subWeapon;
     private bool _isManualAttacking;
     private bool _isAutoAttacking;
 
@@ -108,9 +112,9 @@ public class Character : PoolableObject
     {
         _rb = GetComponent<Rigidbody2D>();
 
-        ChangeMainWeapon(_mainWeaponHolder.GetComponentInChildren<Weapon>());
+        ChangeMainWeapon(_mainWeaponItem);
 
-        ChangeSubWeapon(_subWeaponHolder.GetComponentInChildren<Weapon>());
+        ChangeSubWeapon(_subWeaponItem);
     }
 
     public virtual void Begin()
@@ -213,6 +217,11 @@ public class Character : PoolableObject
         return _aimDirection;
     }
 
+    public float GetMoveSpeed()
+    {
+        return _moveSpeed;
+    }
+
     public bool IsDead()
     {
         return _health <= 0.0f;
@@ -236,6 +245,16 @@ public class Character : PoolableObject
     public bool HasTarget()
     {
         return _target != null;
+    }
+
+    public float GetMaxHealth()
+    {
+        return _maxHealth;
+    }
+
+    public float GetHealth()
+    {
+        return _health;
     }
 
     public float GetMaxEnergy()
@@ -270,15 +289,7 @@ public class Character : PoolableObject
 
     public void ChangeHealth(float value)
     {
-        _health += value;
-        if (_health < 0.0f)
-        {
-            _health = 0.0f;
-        }
-        else if (_health > _maxHealth)
-        {
-            _health = _maxHealth;
-        }
+        _health = Mathf.Clamp(_health + value, 0.0f, _maxHealth);
 
         OnCharacterHealthChanged?.Invoke(this, new OnCharacterHealthChangedArgs
         {
@@ -289,15 +300,7 @@ public class Character : PoolableObject
 
     public void ChangeEnergy(float value)
     {
-        _energy += value;
-        if (_energy < 0.0f)
-        {
-            _energy = 0.0f;
-        }
-        else if (_energy > _maxEnergy)
-        {
-            _energy = _maxEnergy;
-        }
+        _energy = Mathf.Clamp(_energy + value, 0.0f, _maxEnergy);
 
         OnCharacterEnergyChanged?.Invoke(this, new OnCharacterEnergyChangedArgs
         {
@@ -310,26 +313,26 @@ public class Character : PoolableObject
     public void ChangeMaxHealth(float value)
     {
         _health = _health / _maxHealth * (_maxHealth + value);
-        _maxHealth += value;
-        if (_maxHealth < 0.0f)
-        {
-            _maxHealth = 0.0f;
-        }
-
-        if (_health < 0.0f)
-        {
-            _health = 0.0f;
-        }
-        else if (_health > _maxHealth)
-        {
-            _health = _maxHealth;
-        }
+        _health = Mathf.Clamp(_health, 0.0f, _maxHealth);
+        _maxHealth = Mathf.Clamp(_maxHealth + value, 0.0f, _maxHealth);
 
         OnCharacterHealthChanged?.Invoke(this, new OnCharacterHealthChangedArgs
         {
             Amount = value,
             Health = _health,
             MaxHealth = _maxHealth
+        });
+    }
+
+    public void ChangeMaxShield(float value)
+    {
+        _maxShield = Mathf.Clamp(_maxShield + value, 0.0f, _maxShield);
+
+        OnCharacterShieldChanged?.Invoke(this, new OnCharacterShieldChangedArgs
+        {
+            Amount = value,
+            Shield = _shield,
+            MaxShield = _maxShield
         });
     }
 
@@ -554,11 +557,7 @@ public class Character : PoolableObject
         {
             _restoreShieldTimer = 0.0f;
 
-            _shield += _restoreShieldValue;
-            if (_shield > _maxShield)
-            {
-                _shield = _maxShield;
-            }
+            _shield = Mathf.Clamp(_shield + _restoreShieldValue, 0.0f, _maxShield);
 
             OnCharacterShieldChanged?.Invoke(this, new OnCharacterShieldChangedArgs
             {

@@ -12,7 +12,7 @@ public class BattleSystem : CustomMonoBehaviour
     private class Wave
     {
         [SerializeField]
-        private Enemy[] _enemyArray;
+        private EnemySpawn[] _enemySpawnArray;
 
         private bool _isSpawned;
 
@@ -20,9 +20,9 @@ public class BattleSystem : CustomMonoBehaviour
         {
             _isSpawned = true;
 
-            for (int i = 0; i < _enemyArray.Length; i++)
+            for (int i = 0; i < _enemySpawnArray.Length; i++)
             {
-                _enemyArray[i].Spawn();
+                _enemySpawnArray[i].Spawn();
             }
         }
 
@@ -33,9 +33,9 @@ public class BattleSystem : CustomMonoBehaviour
 
         public bool IsOver()
         {
-            for (int i = 0; i < _enemyArray.Length; i++)
+            for (int i = 0; i < _enemySpawnArray.Length; i++)
             {
-                if (!_enemyArray[i].IsDead())
+                if (!_enemySpawnArray[i].Enemy.IsDead())
                 {
                     return false;
                 }
@@ -64,6 +64,7 @@ public class BattleSystem : CustomMonoBehaviour
         _colliderTrigger.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
     }
 
+    //TODO:
     private void Update()
     {
         switch (_state)
@@ -121,7 +122,7 @@ public class BattleSystem : CustomMonoBehaviour
     {
         for (int i = 0; i < _waveArray.Length; i++)
         {
-            if (!_waveArray[i].IsOver())
+            if (!_waveArray[i].IsSpawned() || !_waveArray[i].IsOver())
             {
                 return false;
             }
@@ -129,4 +130,33 @@ public class BattleSystem : CustomMonoBehaviour
 
         return true;
     }
+
+    //List<Enemy> enemies = new List<Enemy>();
+
+    //private void InitWave()
+    //{
+    //    //doc data
+    //    //for
+    //    EnemyInit();
+     
+    //}
+
+    //void FinishWave()
+    //{
+
+    //}
+
+    //public void EnemyInit()
+    //{
+    //    //spawn enemy 
+    //    //add enemy vao list
+    //    //Enemy e = Instantiate();
+    //    //e.onDeathAction = EnemyDeath;
+    //}
+
+    //public void EnemyDeath(Enemy enemy)
+    //{
+    //    //remove enemy list
+    //    //check next wave
+    //}
 }
