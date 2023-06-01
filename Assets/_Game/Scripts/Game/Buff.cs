@@ -13,7 +13,7 @@ public class Buff : CustomMonoBehaviour, ICollectable
     private enum Type
     {
         MoveSpeed = 0,
-        HaxHealth = 1,
+        MaxHealth = 1,
         MaxShield = 2,
     }
 
@@ -28,7 +28,7 @@ public class Buff : CustomMonoBehaviour, ICollectable
                 Player.Instance.ChangeMoveSpeed(2.0f);
 
                 break;
-            case Type.HaxHealth:
+            case Type.MaxHealth:
                 Player.Instance.ChangeMaxHealth(50.0f);
 
                 break;

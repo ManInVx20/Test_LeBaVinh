@@ -9,7 +9,8 @@ public class Enemy : Character
     public enum Type
     {
         Zombie = 0,
-        Witch =1,
+        Witch = 1,
+        Boss_Zombie = 2,
     }
 
     public IEnemyState State { get; private set; }

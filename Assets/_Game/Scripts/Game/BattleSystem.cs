@@ -5,158 +5,84 @@ using UnityEngine;
 
 public class BattleSystem : CustomMonoBehaviour
 {
-    public event EventHandler OnBattleStart;
-    public event EventHandler OnBattleOver;
-
     [Serializable]
-    private class Wave
+    public struct Wave
     {
-        [SerializeField]
-        private EnemySpawn[] _enemySpawnArray;
-
-        private bool _isSpawned;
-
-        public void SpawnEnemies()
-        {
-            _isSpawned = true;
-
-            for (int i = 0; i < _enemySpawnArray.Length; i++)
-            {
-                _enemySpawnArray[i].Spawn();
-            }
-        }
-
-        public bool IsSpawned()
-        {
-            return _isSpawned;
-        }
-
-        public bool IsOver()
-        {
-            for (int i = 0; i < _enemySpawnArray.Length; i++)
-            {
-                if (!_enemySpawnArray[i].Enemy.IsDead())
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
+        public List<EnemySpawn> EnemySpawnList;
     }
 
-    private enum State
-    {
-        Idle = 0,
-        Active = 1,
-        Over = 2,
-    }
+    public event EventHandler OnBattleStarted;
+    public event EventHandler OnBattleFinished;
 
     [SerializeField]
     private ColliderTrigger _colliderTrigger;
     [SerializeField]
-    private Wave[] _waveArray;
+    private List<Wave> _waveList;
 
-    private State _state = State.Idle;
+    private int _waveIndex = -1;
+    private List<Enemy> _enemyList = new List<Enemy>();
 
     private void Start()
     {
-        _colliderTrigger.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
+        _colliderTrigger.OnPlayerEnterTriggerCollider += ColliderTrigger_OnPlayerEnterTriggerCollider;
     }
 
-    //TODO:
-    private void Update()
+    private void ColliderTrigger_OnPlayerEnterTriggerCollider(object sender, EventArgs args)
     {
-        switch (_state)
-        {
-            case State.Idle:
-                break;
-            case State.Active:
-                for (int i = 0; i < _waveArray.Length; i++)
-                {
-                    if (((i - 1) < 0 || _waveArray[i - 1].IsOver()) && !_waveArray[i].IsSpawned())
-                    {
-                        _waveArray[i].SpawnEnemies();
-                    }
-                }
+        StartBattle();
 
-                CheckBattleOver();
-
-                break;
-            case State.Over:
-                break;
-        }
-    }
-
-    private void ColliderTrigger_OnPlayerEnterTrigger(object sender, EventArgs e)
-    {
-        if (_state == State.Idle)
-        {
-            StartBattle();
-
-            _colliderTrigger.OnPlayerEnterTrigger -= ColliderTrigger_OnPlayerEnterTrigger;
-        }
+        _colliderTrigger.OnPlayerEnterTriggerCollider -= ColliderTrigger_OnPlayerEnterTriggerCollider;
     }
 
     private void StartBattle()
     {
-        _state = State.Active;
+        if (_waveList.Count == 0)
+        {
+            return;
+        }
 
-        OnBattleStart?.Invoke(this, EventArgs.Empty);
+        _waveIndex = 0;
+
+        SpawnEnemies(_waveList[_waveIndex]);
+
+        OnBattleStarted?.Invoke(this, EventArgs.Empty);
     }
 
-    private void CheckBattleOver()
+    private void FinishBattle()
     {
-        if (_state == State.Active)
-        {
-            if (AreWavesOver())
-            {
-                _state = State.Over;
+        OnBattleFinished?.Invoke(this, EventArgs.Empty);
+    }
 
-                OnBattleOver?.Invoke(this, EventArgs.Empty);
-            }
+    private void SpawnEnemies(Wave wave)
+    {
+        for (int i = 0; i < wave.EnemySpawnList.Count; i++)
+        {
+            Enemy enemy = wave.EnemySpawnList[i].Spawn();
+            enemy.OnCharacterDespawned += Enemy_OnCharacterDespawned;
+
+            _enemyList.Add(enemy);
         }
     }
 
-    private bool AreWavesOver()
+    private void Enemy_OnCharacterDespawned(object sender, EventArgs args)
     {
-        for (int i = 0; i < _waveArray.Length; i++)
+        Enemy enemy = sender as Enemy;
+
+        _enemyList.Remove(enemy);
+        if (_enemyList.Count == 0)
         {
-            if (!_waveArray[i].IsSpawned() || !_waveArray[i].IsOver())
+            if (_waveIndex + 1 < _waveList.Count)
             {
-                return false;
+                _waveIndex += 1;
+
+                SpawnEnemies(_waveList[_waveIndex]);
+            }
+            else
+            {
+                FinishBattle();
             }
         }
 
-        return true;
+        enemy.OnCharacterDespawned -= Enemy_OnCharacterDespawned;
     }
-
-    //List<Enemy> enemies = new List<Enemy>();
-
-    //private void InitWave()
-    //{
-    //    //doc data
-    //    //for
-    //    EnemyInit();
-     
-    //}
-
-    //void FinishWave()
-    //{
-
-    //}
-
-    //public void EnemyInit()
-    //{
-    //    //spawn enemy 
-    //    //add enemy vao list
-    //    //Enemy e = Instantiate();
-    //    //e.onDeathAction = EnemyDeath;
-    //}
-
-    //public void EnemyDeath(Enemy enemy)
-    //{
-    //    //remove enemy list
-    //    //check next wave
-    //}
 }

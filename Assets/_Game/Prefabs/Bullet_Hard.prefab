@@ -92,7 +92,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: dd1700b3a8f6c30408d34df77d6d5368, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 0
-  _flySpeed: 10
+  _flySpeed: 15
   _despawnTime: 3
   _trailRenderer: {fileID: 3203923288892668459}
 --- !u!1 &8654266542606574567

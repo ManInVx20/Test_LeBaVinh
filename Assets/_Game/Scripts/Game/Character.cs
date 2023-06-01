@@ -203,8 +203,6 @@ public class Character : PoolableObject
     public virtual void Despawn()
     {
         OnCharacterDespawned?.Invoke(this, EventArgs.Empty);
-
-        Destroy(gameObject);
     }
 
     public CharacterAnimator GetCharacterAnimator()
@@ -313,8 +311,9 @@ public class Character : PoolableObject
     public void ChangeMaxHealth(float value)
     {
         _health = _health / _maxHealth * (_maxHealth + value);
-        _health = Mathf.Clamp(_health, 0.0f, _maxHealth);
-        _maxHealth = Mathf.Clamp(_maxHealth + value, 0.0f, _maxHealth);
+        _health = Mathf.Clamp(_health, 0.0f, _maxHealth + value);
+        _maxHealth += value;
+        _maxHealth = Mathf.Clamp(_maxHealth, 0.0f, _maxHealth);
 
         OnCharacterHealthChanged?.Invoke(this, new OnCharacterHealthChangedArgs
         {
@@ -326,7 +325,8 @@ public class Character : PoolableObject
 
     public void ChangeMaxShield(float value)
     {
-        _maxShield = Mathf.Clamp(_maxShield + value, 0.0f, _maxShield);
+        _maxShield += value;
+        _maxShield = Mathf.Clamp(_maxShield, 0.0f, _maxShield);
 
         OnCharacterShieldChanged?.Invoke(this, new OnCharacterShieldChangedArgs
         {

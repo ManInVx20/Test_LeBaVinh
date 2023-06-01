@@ -10,23 +10,6 @@ public class Level : CustomMonoBehaviour
 
     [SerializeField]
     private Transform _startPoint;
-    [SerializeField]
-    private Enemy _boss;
-
-    private void Start()
-    {
-        if (_boss != null)
-        {
-            _boss.OnCharacterDespawned += Boss_OnCharacterDespawned;
-        }
-    }
-
-    private void Boss_OnCharacterDespawned(object sender, System.EventArgs args)
-    {
-        GameManager.Instance.FinishGame(true);
-
-        _boss.OnCharacterDespawned -= Boss_OnCharacterDespawned;
-    }
 
     public void Despawn()
     {

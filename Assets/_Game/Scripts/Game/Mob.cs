@@ -15,6 +15,13 @@ public class Mob : Enemy
     private float _attackTimer;
     private float _attackTime;
 
+    public override void PrepareToUse()
+    {
+        base.PrepareToUse();
+
+        Begin();
+    }
+
     public override void Begin()
     {
         base.Begin();
@@ -23,6 +30,11 @@ public class Mob : Enemy
 
         _attackTimer = 0.0f;
         _attackTime = _attackTimeRange.RandomValueInRange;
+
+        if (IsManualAttacking())
+        {
+            DisableManualAttack();
+        }
     }
 
     public override void Execute()
@@ -46,6 +58,13 @@ public class Mob : Enemy
         Player.Instance.ChangeEnergy(EnergyPrize);
 
         ResourceManager.Instance.TryChangeGold(GoldPrize);
+    }
+
+    public override void Despawn()
+    {
+        base.Despawn();
+
+        ReturnToPool();
     }
 
     private void HandleAttack()

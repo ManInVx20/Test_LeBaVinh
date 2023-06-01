@@ -21,6 +21,8 @@ public class ResourceManager : Singleton<ResourceManager>
     [field: SerializeField]
     public EnemyPool WitchEnemyPool { get; private set; }
     [field: SerializeField]
+    public EnemyPool BossZombieEnemyPool { get; private set; }
+    [field: SerializeField]
     public HitVFXPool BulletVFXPool { get; private set; }
     [field: SerializeField]
     public HitVFXPool OrbtVFXPool { get; private set; }
@@ -89,8 +91,13 @@ public class ResourceManager : Singleton<ResourceManager>
         return true;
     }
 
-    private void ResetGold()
+    public void ResetGold()
     {
         _gold = 0;
+
+        OnGoldChanged?.Invoke(this, new OnGoldChangedArgs
+        {
+            Amount = -_gold,
+        });
     }
 }

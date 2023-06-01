@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Price>k__BackingField: 0
   _consumedEnergy: 0
-  _attackDamage: 10
+  _attackDamage: 15
   _manualAttackTime: 0.5
   _autoAttackTimeAnimationCurve:
     serializedVersion: 2
@@ -246,4 +246,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weapon: {fileID: 9079474397298984129}
-  _hitVFXPrefab: {fileID: 6407102160560226964, guid: 63c246d8c8b866b43826cc0f3a8796ab, type: 3}

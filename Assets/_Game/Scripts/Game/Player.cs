@@ -60,6 +60,8 @@ public class Player : Character
     {
         base.Despawn();
 
+        Destroy(gameObject);
+
         GameManager.Instance.FinishGame(false);
     }
 

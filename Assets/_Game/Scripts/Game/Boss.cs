@@ -8,13 +8,18 @@ public class Boss : Enemy
     public BossPatrolState PatrolState { get; } = new BossPatrolState();
     public BossAttackOneState AttackOneState { get; } = new BossAttackOneState();
 
+    public override void PrepareToUse()
+    {
+        base.PrepareToUse();
+
+        Begin();
+    }
+
     public override void Begin()
     {
         base.Begin();
 
         ChangeState(IdleState);
-
-        Hide();
     }
 
     public override void Execute()
@@ -36,5 +41,12 @@ public class Boss : Enemy
         Player.Instance.ChangeEnergy(EnergyPrize);
 
         ResourceManager.Instance.TryChangeGold(GoldPrize);
+    }
+
+    public override void Despawn()
+    {
+        base.Despawn();
+
+        ReturnToPool();
     }
 }

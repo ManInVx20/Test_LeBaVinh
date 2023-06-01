@@ -36,13 +36,15 @@ public class Room : CustomMonoBehaviour
     [Header("Components")]
     [SerializeField]
     private BattleSystem _battleSystem;
+    [SerializeField]
+    private bool _isFinalRoom;
 
     private FlyingPopupUI _clearUIGameObject;
 
     private void Start()
     {
-        _battleSystem.OnBattleStart += BattleSystem_OnBattleStart;
-        _battleSystem.OnBattleOver += BattleSystem_OnBattleOver;
+        _battleSystem.OnBattleStarted += BattleSystem_OnBattleStart;
+        _battleSystem.OnBattleFinished += BattleSystem_OnBattleOver;
 
         BuildBlocks();
     }
@@ -64,8 +66,15 @@ public class Room : CustomMonoBehaviour
     {
         DespawnDoorBlocks();
 
-        _clearUIGameObject = Instantiate(ResourceManager.Instance.ClearUIPrefab, UIManager.Instance.GetUI<GameplayCanvas>().GetTransform());
-        _clearUIGameObject.Initialize();
+        if (!_isFinalRoom)
+        {
+            _clearUIGameObject = Instantiate(ResourceManager.Instance.ClearUIPrefab, UIManager.Instance.GetUI<GameplayCanvas>().GetTransform());
+            _clearUIGameObject.Initialize();
+        }
+        else
+        {
+            GameManager.Instance.FinishGame(true);
+        }
     }
 
     private void BuildBlocks()
@@ -112,7 +121,7 @@ public class Room : CustomMonoBehaviour
         DestroyDoorBlocks(_rightConnectedRoom, ResourceManager.Instance.VerticalWallPrefab, _rightRoomData);
     }
 
-    private void GenerateDoorBlocks(Room connectedRoom, GameObject doorPrefab,  RoomData roomData)
+    private void GenerateDoorBlocks(Room connectedRoom, GameObject doorPrefab, RoomData roomData)
     {
         if (connectedRoom != null)
         {

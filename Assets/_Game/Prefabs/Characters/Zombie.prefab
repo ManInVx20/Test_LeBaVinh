@@ -106,7 +106,7 @@ MonoBehaviour:
   _subWeaponItem: {fileID: 5897640453650506459}
   _isFacingRight: 1
   _isMainWeapon: 0
-  _moveSpeed: 4
+  _moveSpeed: 3
   _maxHealth: 100
   _maxEnergy: 0
   _maxShield: 0

@@ -9,7 +9,7 @@ public class EnemySpawn : CustomMonoBehaviour
     [SerializeField]
     private Enemy.Type _enemyType;
 
-    public void Spawn()
+    public Enemy Spawn()
     {
         EnemyPool enemyPool = null;
         switch (_enemyType)
@@ -22,9 +22,15 @@ public class EnemySpawn : CustomMonoBehaviour
                 enemyPool = ResourceManager.Instance.WitchEnemyPool;
 
                 break;
+            case Enemy.Type.Boss_Zombie:
+                enemyPool = ResourceManager.Instance.BossZombieEnemyPool;
+
+                break;
         }
 
         Enemy = enemyPool.GetPrefabInstance();
         Enemy.GetTransform().SetParent(GetTransform(), false);
+
+        return Enemy;
     }
 }

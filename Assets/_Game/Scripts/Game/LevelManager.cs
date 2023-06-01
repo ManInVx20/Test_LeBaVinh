@@ -30,7 +30,7 @@ public class LevelManager : Singleton<LevelManager>
         return levelIndex + 1;
     }
 
-    public void LoadLevel(Action onLoadStarted = null, Action onLoadCompleted = null)
+    public void LoadLevel(Action onLoadStarted = null, Action<Level> onLoadCompleted = null)
     {
         UnloadLevel();
 
@@ -52,12 +52,12 @@ public class LevelManager : Singleton<LevelManager>
         levelIndex = 0;
     }
 
-    private IEnumerator LoadLevelCoroutine(float loadingTime, Action onLoadCompleted)
+    private IEnumerator LoadLevelCoroutine(float loadingTime, Action<Level> onLoadCompleted)
     {
         level = Instantiate(ResourceManager.Instance.LevelPrefabArray[levelIndex]);
 
         yield return new WaitForSeconds(loadingTime);
 
-        onLoadCompleted?.Invoke();
+        onLoadCompleted?.Invoke(level);
     }
 }

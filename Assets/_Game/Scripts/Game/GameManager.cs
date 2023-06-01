@@ -46,6 +46,8 @@ public class GameManager : Singleton<GameManager>
     {
         _state = State.GameWaited;
 
+        ResourceManager.Instance.ResetGold();
+
         LevelManager.Instance.ResetLevelIndex();
 
         for (int i = 0; i < _cameraFollowArray.Length; i++)
@@ -65,7 +67,7 @@ public class GameManager : Singleton<GameManager>
         {
             UIManager.Instance.CloseAll();
             UIManager.Instance.OpenUI<LoadingCanvas>();
-        }, () =>
+        }, (level) =>
         {
             if (_player == null)
             {
@@ -74,7 +76,7 @@ public class GameManager : Singleton<GameManager>
 
             if (_player != null)
             {
-                _player.GetTransform().position = FindObjectOfType<Level>().StartPosition;
+                _player.GetTransform().position = level.StartPosition;
 
                 for (int i = 0; i < _cameraFollowArray.Length; i++)
                 {
